@@ -1,0 +1,25 @@
+<h1>Cabins#index</h1>
+<table>
+    <thead>
+      <tr>
+        <th>tipo</th>
+        <th>description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= link_to 'Nueva Cabaña', new_cabin_path %>
+      <%@cabins.each do |cabin| %>
+        <tr>
+          <td><%= cabin.description %></td>
+          <td><%= cabin.tipo %>
+          <%= link_to 'ver', cabin_path(cabin) %>
+          <%= link_to 'edit', edit_cabin_path(cabin) %>
+          <%= link_to 'ELIMINAR', cabin_path(cabin),
+                method: :delete,
+                data: {confirm: '¿Estas seguro?'} %>
+        </tr>
+      <% end %>
+    </br>
+
+    </tbody>
+</table>
