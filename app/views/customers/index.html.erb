@@ -1,0 +1,30 @@
+<h1>Customer#index</h1>
+<table>
+  <thead>
+    <tr>
+      <th> Primer Nombre </th>
+      <th> Segundo Nombre </th>
+      <th> Rut </th>
+      <th> Email </th>
+      <th> Direccion </th>
+      <th> Telefono </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @customers.each do |customer| %>
+    <tr>
+      <td> <%= customer.first_name %> </td>
+      <td> <%= customer.last_name %> </td>
+      <td> <%= customer.rut %> </td>
+      <td> <%= customer.email %> </td>
+      <td> <%= customer.address %> </td>
+      <td> <%= customer.phone %>
+      <%= link_to 'ver', customer_path(customer) %>
+      <%= link_to 'editar', edit_customer_path(customer) %>
+      <%= link_to 'eliminar', customer_path(customer),
+                  method: :delete,
+                  data: {confirm: '¿Estas seguro?'} %> </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

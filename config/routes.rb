@@ -1,18 +1,19 @@
 Rails.application.routes.draw do
 
- resources :cabins
+  resources :customers
+  resources :cabins
 
 
 =begin
   #Rutas Cliente
 
-  get 'customer/index'
-  get 'customer/show'
-  get 'customer/new'
-  get 'customer/create'
-  get 'customer/edit'
-  get 'customer/update'
-  get 'customer/destroy'
+  get 'customers/index'
+  get 'customers/show'
+  get 'customers/new'
+  get 'customers/create'
+  get 'customers/edit'
+  get 'customers/update'
+  get 'customers/destroy'
 
   #Rutas Reserva
 

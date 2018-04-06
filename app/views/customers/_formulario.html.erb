@@ -1,0 +1,27 @@
+<%= form_for(@customer, :html => { :role => "form" }) do |f| %>
+  <p>
+  <%=f.label :first_name  %>
+  <%=f.text_field :first_name %>
+  </p>
+  <p>
+  <%=f.label :last_name %>
+  <%=f.text_field :last_name %>
+  </p>
+  <p>
+  <%=f.label :rut  %>
+  <%=f.text_field :rut %>
+  </p>
+  <p>
+  <%=f.label :email %>
+  <%=f.text_field :email %>
+  </p>
+  <p>
+  <%=f.label :address  %>
+  <%=f.text_field :address %>
+  </p>
+  <p>
+  <%=f.label :phone %>
+  <%=f.text_field :phone %>
+  </p>
+  <%=f.submit %>
+<% end %>
