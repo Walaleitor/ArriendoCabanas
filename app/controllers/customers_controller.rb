@@ -6,6 +6,7 @@ class CustomersController < ApplicationController
   end
 
   def show
+    #set costumer
   end
 
   def new
@@ -22,9 +23,11 @@ class CustomersController < ApplicationController
   end
 
   def edit
+    #set costumer
   end
 
   def update
+    #set costumer
     if @customer.update(customer_params)
       redirect_to @customer
     else
@@ -33,6 +36,7 @@ class CustomersController < ApplicationController
   end
 
   def destroy
+    #set costumer
     @customer.destroy
   end
 

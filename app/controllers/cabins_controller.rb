@@ -35,6 +35,7 @@ class CabinsController < ApplicationController
   end
 
   def destroy
+    #set cabin
     @cabin.destroy
   end
 
