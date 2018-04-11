@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
-  before_action :set_params, only: [:show , :edit, :update, :destroy]
+  before_action :set_params, only: [:show, :edit, :update, :destroy]
 
   def index
     @customers = Customer.all
@@ -33,6 +33,7 @@ class CustomersController < ApplicationController
   end
 
   def destroy
+    #set_params
     @customer.destroy
   end
 
