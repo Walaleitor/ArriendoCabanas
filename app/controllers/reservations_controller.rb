@@ -28,7 +28,7 @@ class ReservationsController < ApplicationController
 
   def update
     #set_params
-    if @reservation.update
+    if @reservation.update(reservation_params)
       redirect_to(@reservation)
     else
       render "edit"

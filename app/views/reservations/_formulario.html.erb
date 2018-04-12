@@ -1,0 +1,11 @@
+<%= form_for(@reservation, :html => { :role => "form" }) do |f| %>
+  <p>
+  <%=f.label :tipo  %>
+  <%=f.date_field :tipo %>
+  </p>
+  <p>
+  <%=f.label :description %>
+  <%=f.date_field :description %>
+  </p>
+  <%=f.submit %>
+<% end %>

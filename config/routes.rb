@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :customers
-  resources :cabins
-  resources :reservations
+  resources :customers, :cabins do
+    resource :reservations
+  end
+
+  get 'cabins/:id/index', to: 'reservations#index'
 
 
 =begin
