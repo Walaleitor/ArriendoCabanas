@@ -8,7 +8,7 @@
     <tbody>
       <%@cabins.each do |cabin| %>
         <tr>
-          <td><%= cabin.description %></td>
+          <td><%= cabin.nombre %></td>
           <td><%= cabin.tipo %>
           <%= link_to 'ver', cabin_path(cabin) %>
           <%= link_to 'edit', edit_cabin_path(cabin) %>

@@ -51,7 +51,7 @@ class CabinsController < ApplicationController
   private
 
   def cabin_params
-    params.require(:cabin).permit(:tipo, :description)
+    params.require(:cabin).permit(:tipo, :nombre)
   end
 
   def set_cabin
