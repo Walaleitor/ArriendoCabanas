@@ -1,0 +1,12 @@
+class CreateServices < ActiveRecord::Migration[5.1]
+  def change
+    create_table :services do |t|
+      t.string :name
+      t.string :quantity
+      t.bigint :value
+      t.belongs_to :cabins, index: true
+
+      t.timestamps
+    end
+  end
+end

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  model: MyString
+  ring_size: 
+  type: 
+  value: 
+
+two:
+  model: MyString
+  ring_size: 
+  type: 
+  value: 
