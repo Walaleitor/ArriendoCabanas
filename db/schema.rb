@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180420010333) do
+ActiveRecord::Schema.define(version: 20180423171103) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,8 +20,12 @@ ActiveRecord::Schema.define(version: 20180420010333) do
     t.bigint "ring_size"
     t.string "type"
     t.bigint "value"
+    t.bigint "cabins_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "payments_id"
+    t.index ["cabins_id"], name: "index_bicycles_on_cabins_id"
+    t.index ["payments_id"], name: "index_bicycles_on_payments_id"
   end
 
   create_table "cabins", force: :cascade do |t|
@@ -56,8 +60,12 @@ ActiveRecord::Schema.define(version: 20180420010333) do
     t.string "description"
     t.bigint "quantity"
     t.bigint "price"
+    t.bigint "cabins_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "payments_id"
+    t.index ["cabins_id"], name: "index_products_on_cabins_id"
+    t.index ["payments_id"], name: "index_products_on_payments_id"
   end
 
   create_table "reservations", force: :cascade do |t|
@@ -75,8 +83,12 @@ ActiveRecord::Schema.define(version: 20180420010333) do
     t.string "name"
     t.string "quantity"
     t.bigint "value"
+    t.bigint "cabins_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "payments_id"
+    t.index ["cabins_id"], name: "index_services_on_cabins_id"
+    t.index ["payments_id"], name: "index_services_on_payments_id"
   end
 
 end
