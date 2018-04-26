@@ -50,6 +50,4 @@ class BicyclesController < ApplicationController
   def bicycle_params
     params.require(:bicycle).permit(:model, :ring_size, :type, :value)
   end
-
-end
 end

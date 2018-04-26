@@ -1,0 +1,28 @@
+<table>
+  <thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Cantidad</th>
+    <th>Precio</th>
+    
+  </tr>
+  </thead>
+  <tbody>
+  <%@cabins.each do |service| %>
+    <tr>
+      <td><%= service.name %></td>
+      <td><%= service.quantity %></td>
+      <td><%= service.value %>
+        <%= link_to 'ver', service_path(service) %>
+        <%= link_to 'edit', edit_service_path(service) %>
+        <%= link_to 'ELIMINAR', service_path(service),
+                    method: :delete,
+                    data: {confirm: '¿Estas seguro?'} %> </td>
+    </tr>
+  <% end %>
+  </br>
+
+  </tbody>
+</table>
+</br>
+<%= link_to 'Nuevo Servicio', new_service_path %>

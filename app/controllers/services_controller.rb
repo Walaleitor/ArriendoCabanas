@@ -1,8 +1,8 @@
-class ProductsController < ApplicationController
+class ServicesController < ApplicationController
 	before_action :set_params, only: [:show, :edit, :update, :destroy]
 
   def index
-    @products = Product.all
+    @services = Services.all
   end
 
   def show
@@ -10,14 +10,14 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @product = Product.new
+    @service = Service.new
   end
 
   def create
     @cabin = Cabin.find(params[:cabin_id])
-    @product = @cabin.product.create(product_params)
-    if @product.save
-      redirect_to (@product)
+    @service = @cabin.service.create(service_params)
+    if @service.save
+      redirect_to (@service)
     else
       render "new"
     end
@@ -29,8 +29,8 @@ class ProductsController < ApplicationController
 
   def update
     #set_params
-    if @product.update(product_params)
-      redirect_to(@product)
+    if @service.update(service_params)
+      redirect_to(@service)
     else
       render "edit"
     end
@@ -38,16 +38,16 @@ class ProductsController < ApplicationController
 
   def destroy
     #set_params
-    @product.destroy
+    @service.destroy
   end
 
   private
 
   def set_params
-    @product = Product.find(params[:id])
+    @service = Service.find(params[:id])
   end
 
   def product_params
-    params.require(:product).permit(:name, :description, :quantity, :price)
+    params.require(:service).permit(:name, :quantity, :value)
   end
 end
