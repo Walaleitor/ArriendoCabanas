@@ -1,0 +1,19 @@
+<%= form_for(@product, :html => { :role => "form" }) do |f| %>
+  <p>
+  <%=f.label :name  %>
+  <%=f.date_field :name %>
+  </p>
+  <p>
+  <%=f.label :description %>
+  <%=f.date_field :description %>
+  </p>
+  <p>
+  <%=f.label :quantity %>
+  <%=f.date_field :quantity %>
+  </p>
+  <p>
+  <%=f.label :price %>
+  <%=f.date_field :price %>
+  </p>
+  <%=f.submit %>
+<% end %>

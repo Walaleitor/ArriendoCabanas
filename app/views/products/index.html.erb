@@ -1,0 +1,30 @@
+<table>
+  <thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Descripcion</th>
+    <th>Cantidad</th>
+    <th>Precio</th>
+    
+  </tr>
+  </thead>
+  <tbody>
+  <%@cabins.each do |product| %>
+    <tr>
+      <td><%= product.name %></td>
+      <td><%= product.description %></td>
+      <td><%= product.quantity %></td>
+      <td><%= product.price %>
+        <%= link_to 'ver', product_path(product) %>
+        <%= link_to 'edit', edit_product_path(product) %>
+        <%= link_to 'ELIMINAR', product_path(product),
+                    method: :delete,
+                    data: {confirm: '¿Estas seguro?'} %> </td>
+    </tr>
+  <% end %>
+  </br>
+
+  </tbody>
+</table>
+</br>
+<%= link_to 'Nuevo Producto', new_product_path %>
