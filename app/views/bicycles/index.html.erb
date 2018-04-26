@@ -1,0 +1,27 @@
+<table>
+  <thead>
+    <tr>
+      <th> Modelo </th>
+      <th> Tamaño del Aro </th>
+      <th> Tipo </th>
+      <th> Precio </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @customers.each do |bicycle| %>
+    <tr>
+      <td> <%= bicycle.model %> </td>
+      <td> <%= bicycle.ring_size %> </td>
+      <td> <%= bicycle.type %> </td>
+      <td> <%= bicycle.value %> </td>
+      <%= link_to 'ver', bicycle_path(bicycle) %>
+      <%= link_to 'editar', edit_bicycle_path(bicycle) %>
+      <%= link_to 'eliminar', bicycle_path(bicycle),
+                  method: :delete,
+                  data: {confirm: '¿Estas seguro?'} %> </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</br>
+<%= link_to 'Nueva Bicicleta', new_bicycle_path %>

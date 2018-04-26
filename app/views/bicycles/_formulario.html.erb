@@ -1,0 +1,19 @@
+<%= form_for(@bicycle, :html => { :role => "form" }) do |f| %>
+  <p>
+  <%=f.label :model  %>
+  <%=f.text_field :model %>
+  </p>
+  <p>
+  <%=f.label :ring_size %>
+  <%=f.text_field :ring_size %>
+  </p>
+  <p>
+  <%=f.label :type %>
+  <%=f.text_field :type %>
+  </p>
+  <p>
+  <%=f.label :value %>
+  <%=f.text_field :value %>
+  </p>
+  <%=f.submit %>
+<% end %>
