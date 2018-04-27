@@ -1,25 +1,30 @@
-<table>
-    <thead>
-      <tr>
-        <th>tipo</th>
-        <th>description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <%@cabins.each do |cabin| %>
-        <tr>
-          <td><%= cabin.name %></td>
-          <td><%= cabin.tipo %>
-          <%= link_to 'ver', cabin_path(cabin) %>
-          <%= link_to 'edit', edit_cabin_path(cabin) %>
-          <%= link_to 'ELIMINAR', cabin_path(cabin),
-                method: :delete,
-                      data: {confirm: '¿Estas seguro?'} %> </td>
-        </tr>
-      <% end %>
-    </br>
+<div class="container">
+<div class="row">
+  <div class="col-sm-4">
+    <h3>Todas las Cabañas</h3>
+  </div>
+  <div class="col-md-4">
+    <%= link_to 'Agregar', new_cabin_path, remote: true, :class => 'btn btn-primary' %>
+  </div>
+</div>
+<table class="table table-bordered">
+  <tr>
+    <th>Tipo</th>
+    <th>Nombre</th>
+  </tr>
 
-    </tbody>
+  <% @cabins.each do |cabin| %>
+    <tr>
+      <td><%= cabin.tipo %></td>
+      <td><%= cabin.name %></td>
+      <td><%= link_to 'Ver', cabin_path(cabin), :class => 'btn btn-info' %></td>
+      <td><%= link_to 'Reserva', new_cabin_reservations_path(cabin), :class => 'btn btn-info'  %></td>
+      <td><%= link_to 'Editar', edit_cabin_path(cabin), remote: true, :class => 'btn btn-warning'%></td>
+      <td><%= link_to 'Borrar', cabin_path(cabin), :class => 'btn btn-danger',
+                      method: :delete,
+                      data: { confirm: '¿Estás seguro?' } %></td>
+    </tr>
+  <% end %>
 </table>
-</br>
-<%= link_to 'Nueva Cabaña', new_cabin_path %>
+<%= link_to 'Home', root_path %>
+</div>

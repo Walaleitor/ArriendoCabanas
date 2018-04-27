@@ -1,6 +1,6 @@
 class Cabin < ApplicationRecord
-  has_many :reservations
-  has_many :customers , through:  :reservations
-  has_many :bicycles
-  has_many :services
+  has_many :reservations, :dependent => :delete_all
+  has_many :customers , through:  :reservations, :dependent => :delete_all
+  has_many :bicycles, :dependent => :delete_all
+  has_many :services, :dependent => :delete_all
 end

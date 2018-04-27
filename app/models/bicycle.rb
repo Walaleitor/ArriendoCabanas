@@ -1,4 +1,4 @@
 class Bicycle < ApplicationRecord
-	has_one :cabins
-	has_one :payments
+	has_one :cabin
+	has_one :payment
 end

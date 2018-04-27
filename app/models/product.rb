@@ -1,4 +1,4 @@
 class Product < ApplicationRecord
-	has_one :payments
-	belongs_to :cabins
+	has_one :payment
+	belongs_to :cabin
 end

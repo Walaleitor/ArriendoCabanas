@@ -1,6 +1,6 @@
 class Payment < ApplicationRecord
   belongs_to :reservation
-  has_many :products
-  has_many :services
-  has_many :bicycles
+  has_many :products, :dependent => delete_all
+  has_many :services, :dependent => delete_all
+  has_many :bicycles, :dependent => delete_all
 end
