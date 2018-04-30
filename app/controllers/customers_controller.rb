@@ -10,12 +10,14 @@ class CustomersController < ApplicationController
 
   def new
     @customer = Customer.new
+    @customer.reservations.build
+    @cabin = Cabin.find(params[:id])
   end
 
   def create
     @customer = Customer.new(customer_params)
     if @customer.save
-      redirect_to(@customer)
+      redirect_to reservations_path
     else
       render "new"
     end
@@ -44,6 +46,6 @@ class CustomersController < ApplicationController
   end
 
   def customer_params
-    params.require(:customer).permit(:first_name, :last_name, :rut, :email, :address, :phone)
+    params.require(:customer).permit(:first_name, :last_name, :rut, :email, :address, :phone, reservations_attributes: [:start_date, :end_date, :cabin_id])
   end
 end

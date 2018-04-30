@@ -14,8 +14,7 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    @cabin = Cabin.find(params[:cabin_id])
-    @reservation = @cabin.reservation.create(reservation_params)
+    @reservation = Reservation.create(reservation_params)
     if @reservation.save
       redirect_to (@reservation)
     else

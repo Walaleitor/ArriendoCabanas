@@ -1,11 +1,43 @@
-<%= form_for(@reservation, :html => { :role => "form" }) do |f| %>
+<%= form_for(@reservation, url: new_reservation_path, html: { role: "form" }) do |f| %>
   <p>
-  <%=f.label :tipo  %>
-  <%=f.date_field :tipo %>
+  <%=f.label :start_date  %>
+  <%= select_date Date.today, prefix: :start_date %>
   </p>
   <p>
-  <%=f.label :description %>
-  <%=f.date_field :description %>
+  <%=f.label :end_date %>
+  <%= select_date Date.today, prefix: :end_date %>
   </p>
+  <h2>Clientes</h2>
+
+    <%= f.fields_for :customers do | customer | %>
+      <div class="customers_fields">
+        <div class="fields">
+          <p>
+          <%= customer.label :first_name, "Nombre" %><br>
+          <%= customer.text_field :first_name %>
+          </p>
+          <p>
+          <%= customer.label :last_name, "Apellido" %><br>
+          <%= customer.text_field :last_name %>
+          </p>
+          <p>
+          <%= customer.label :rut, "Rut" %><br>
+          <%= customer.text_field :rut %>
+          </p>
+          <p>
+          <%= customer.label :email, "Email" %><br>
+          <%= customer.text_field :email %>
+          </p>
+          <p>
+          <%= customer.label :address, "Direccion" %><br>
+          <%= customer.text_field :address %>
+          </p>
+          <p>
+          <%= customer.label :phone, "Telefono" %><br>
+          <%= customer.text_field :phone %>
+          </p>
+        </div>
+      </div>
+    <% end %>
   <%=f.submit %>
 <% end %>

@@ -3,18 +3,15 @@
   <tr>
     <th>tipo</th>
     <th>description</th>
+    
   </tr>
   </thead>
   <tbody>
-  <%@cabins.each do |cabin| %>
+  <%@reservations.each do |reservation| %>
     <tr>
-      <td><%= cabin.nombre %></td>
-      <td><%= cabin.tipo %>
-        <%= link_to 'ver', cabin_path(cabin) %>
-        <%= link_to 'edit', edit_cabin_path(cabin) %>
-        <%= link_to 'ELIMINAR', cabin_path(cabin),
-                    method: :delete,
-                    data: {confirm: '¿Estas seguro?'} %> </td>
+      <td><%= reservation.start_date %></td>
+      <td><%= reservation.end_date %>
+
     </tr>
   <% end %>
   </br>
@@ -22,4 +19,3 @@
   </tbody>
 </table>
 </br>
-<%= link_to 'Nueva Cabaña', new_cabin_path %>
