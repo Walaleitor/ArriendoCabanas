@@ -16,8 +16,27 @@ class CustomersController < ApplicationController
 
   def create
     @customer = Customer.new(customer_params)
-    if @customer.save
-      redirect_to reservations_path
+    reservation = @customer.reservations.first
+    start_d = reservation.start_date
+    end_d = reservation.end_date
+    if end_d.year == start_d.year && end_d.month == start_d.month && end_d.day > start_d.day
+      if @customer.save
+        redirect_to reservations_path
+      else
+        render "new"
+      end
+    elsif end_d.year == start_d.year && end_d.month > start_d.month
+      if @customer.save
+        redirect_to reservations_path
+      else
+        render "new"
+      end
+    elsif end_d.year > start_d.year
+      if @customer.save
+        redirect_to reservations_path
+      else
+        render "new"
+      end
     else
       render "new"
     end
