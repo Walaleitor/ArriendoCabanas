@@ -16,3 +16,11 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+//= require moment
+//= require fullcalendar
+
+$(document).ready(function() {
+    $("#calendar").fullCalendar({
+        events: '/reservations.json'
+    });
+});

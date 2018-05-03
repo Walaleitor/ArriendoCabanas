@@ -26,6 +26,7 @@
     <%= f.fields_for :reservations do | reservation | %>
       <div class="reservations_fields">
         <div class="fields">
+          <%= reservation.hidden_field :cabin_id, :value => @cabin.id %>
           <p>
           <%= reservation.label :start_date, "Fecha de comienzo" %><br>
           <%= reservation.date_field :start_date %>
@@ -33,7 +34,6 @@
           <p>
           <%= reservation.label :end_date, "Fecha de termino" %><br>
           <%= reservation.date_field :end_date %>
-          <%= reservation.hidden_field :cabin_id, :value => @cabin.id %> 
         </p>
         </div>
       </div>

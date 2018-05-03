@@ -23,22 +23,22 @@ class CustomersController < ApplicationController
       if @customer.save
         redirect_to reservations_path
       else
-        render "new"
+        redirect_to cabins_path
       end
     elsif end_d.year == start_d.year && end_d.month > start_d.month
       if @customer.save
         redirect_to reservations_path
       else
-        render "new"
+        redirect_to cabins_path
       end
     elsif end_d.year > start_d.year
       if @customer.save
         redirect_to reservations_path
       else
-        render "new"
+        redirect_to cabins_path
       end
     else
-      render "new"
+      redirect_to cabins_path
     end
   end
 

@@ -10,21 +10,17 @@ class ReservationsController < ApplicationController
   end
 
   def new
-    @reservation = Reservation.new
+    @cabin = Cabin.find(params[:id])
+    @reservation = @cabin.reservations.new
+    @reservation.build_customer
   end
 
   def create
     @reservation = Reservation.create(reservation_params)
-    start_d = @reservation.start_date
-    end_d = @reservation.end_date
-    if end_d.year >= start_d.year && end_d.month >= start_d.month && end_d.day > start_d.day
-      if @reservation.save
+    if @reservation.save
         redirect_to (@reservation)
-      else
-        render "new"
-      end
     else
-      render 'new'
+        render "new"
     end
   end
 
@@ -53,7 +49,7 @@ class ReservationsController < ApplicationController
   end
 
   def reservation_params
-    params.require(:reservation).permit(:start_date, :end_date)
+    params.require(:reservation).permit(:start_date, :end_date, customers_attributes: [:first_name, :last_name, :rut, :email, :address, :phone])
   end
 
 end
