@@ -8,12 +8,12 @@ class Customer < ApplicationRecord
   #Validaciones
 
   validates_presence_of  :email, :address, :phone
-
   validates_email_format_of :email, :message => 'is not looking good'
 
   validates :rut,
             rut: true,
-            presence: true
+            presence: true,
+            uniqueness: true
 
   validates :first_name,
              presence: true,
@@ -23,6 +23,6 @@ class Customer < ApplicationRecord
              presence: true,
              length: {minimum: 2,maximum: 10}
 
-
   accepts_nested_attributes_for :reservations
+
 end
