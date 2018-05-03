@@ -1,4 +1,13 @@
-<h1>Cabins#show</h1>
-<p> <%= @cabin.tipo %> </p>
-<p> <%= @cabin.name %> </p>
-<%= link_to 'volver', cabins_path %>
+<div class="container">
+  <div id="calendar"></div>
+  <p><%= link_to 'Reserva', new_reservation_path(@cabin), :class => 'btn btn-info'  %></p>
+
+
+  <script >
+      $(document).ready(function () {
+          $("#calendar").fullCalendar({
+                events: "/cabins/<%="#{@cabin.id}"%>.json"
+          });
+      });
+  </script>
+</div>

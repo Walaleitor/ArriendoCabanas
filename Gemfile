@@ -5,13 +5,17 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+#Email Validator
+gem 'validates_email_format_of'
+#Rut Validator
+gem 'rut_validation'
 #bootstrap
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 #Full Calendar
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+###################GEMAS VANILLA#######################################
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
 # Use postgresql as the database for Active Record

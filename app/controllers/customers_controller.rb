@@ -19,27 +19,26 @@ class CustomersController < ApplicationController
     reservation = @customer.reservations.first
     start_d = reservation.start_date
     end_d = reservation.end_date
-    if end_d.year == start_d.year && end_d.month == start_d.month && end_d.day > start_d.day
+    #if end_d.year == start_d.year && end_d.month == start_d.month && end_d.day > start_d.day
       if @customer.save
         redirect_to reservations_path
       else
         redirect_to cabins_path
       end
-    elsif end_d.year == start_d.year && end_d.month > start_d.month
-      if @customer.save
-        redirect_to reservations_path
-      else
-        redirect_to cabins_path
-      end
-    elsif end_d.year > start_d.year
-      if @customer.save
-        redirect_to reservations_path
-      else
-        redirect_to cabins_path
-      end
-    else
-      redirect_to cabins_path
-    end
+   # elsif end_d.year == start_d.year && end_d.month > start_d.month
+   #   if @customer.save
+    ##  else
+     #   redirect_to cabins_path
+    #  end
+   # elsif end_d.year > start_d.year
+    #  if @customer.save
+   #     redirect_to reservations_path
+    #  else
+    #    redirect_to cabins_path
+    #  end
+   # else
+   #   redirect_to cabins_path
+   # end
   end
 
   def edit
