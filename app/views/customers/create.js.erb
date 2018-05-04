@@ -1,0 +1,9 @@
+<% if @customer.errors.empty? %>
+// add the row to the table, show alert and hide modal
+$('table tbody').append(' <%= j render "row", product: @customer %>');
+$('.alert-success').html("El producto ha sido creado con éxito").show();
+$('#customer-modal').modal('hide');
+<% else %>
+// show first error
+alert('<%= @customer.errors.full_messages[0] %>');
+<% end %>

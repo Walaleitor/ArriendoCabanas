@@ -10,9 +10,10 @@ class ReservationsController < ApplicationController
   end
 
   def new
+    @customer = Customer.all
     @cabin = Cabin.find(params[:id])
     @reservation = @cabin.reservations.new
-    @reservation.build_customer
+
   end
 
   def create
@@ -49,7 +50,7 @@ class ReservationsController < ApplicationController
   end
 
   def reservation_params
-    params.require(:reservation).permit(:start_date, :end_date, customers_attributes: [:first_name, :last_name, :rut, :email, :address, :phone])
+    params.require(:reservation).permit(:start_date, :end_date, :cabin_id )
   end
 
 end

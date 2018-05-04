@@ -23,6 +23,5 @@ class Customer < ApplicationRecord
              presence: true,
              length: {minimum: 2,maximum: 10}
 
-  accepts_nested_attributes_for :reservations
 
 end

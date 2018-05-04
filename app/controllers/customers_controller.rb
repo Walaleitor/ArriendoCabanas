@@ -10,35 +10,15 @@ class CustomersController < ApplicationController
 
   def new
     @customer = Customer.new
-    @customer.reservations.build
-    @cabin = Cabin.find(params[:id])
   end
 
   def create
     @customer = Customer.new(customer_params)
-    reservation = @customer.reservations.first
-    start_d = reservation.start_date
-    end_d = reservation.end_date
-    #if end_d.year == start_d.year && end_d.month == start_d.month && end_d.day > start_d.day
-      if @customer.save
-        redirect_to reservations_path
-      else
-        redirect_to cabins_path
-      end
-   # elsif end_d.year == start_d.year && end_d.month > start_d.month
-   #   if @customer.save
-    ##  else
-     #   redirect_to cabins_path
-    #  end
-   # elsif end_d.year > start_d.year
-    #  if @customer.save
-   #     redirect_to reservations_path
-    #  else
-    #    redirect_to cabins_path
-    #  end
-   # else
-   #   redirect_to cabins_path
-   # end
+    if @customer.save
+      redirect_back(fallback_location: 'something')
+    else
+      render "new"
+    end
   end
 
   def edit
@@ -64,6 +44,6 @@ class CustomersController < ApplicationController
   end
 
   def customer_params
-    params.require(:customer).permit(:first_name, :last_name, :rut, :email, :address, :phone, reservations_attributes: [:start_date, :end_date, :cabin_id])
+    params.require(:customer).permit(:first_name, :last_name, :rut, :email, :address, :phone)
   end
 end
