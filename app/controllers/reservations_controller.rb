@@ -10,16 +10,16 @@ class ReservationsController < ApplicationController
   end
 
   def new
-    @customer = Customer.all
     @cabin = Cabin.find(params[:id])
     @reservation = @cabin.reservations.new
 
   end
 
   def create
-    @reservation = Reservation.create(reservation_params)
+    @cabin = Cabin.find(params[:id])
+    @reservation = @cabin.reservations.new(reservation_params)
     if @reservation.save
-        redirect_to (@reservation)
+        redirect_to cabin_path(@cabin)
     else
         render "new"
     end
@@ -50,7 +50,7 @@ class ReservationsController < ApplicationController
   end
 
   def reservation_params
-    params.require(:reservation).permit(:start_date, :end_date, :cabin_id )
+    params.require(:reservation).permit(:start_date, :end_date, :customer_id)
   end
 
 end

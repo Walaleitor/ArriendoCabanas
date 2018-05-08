@@ -7,8 +7,7 @@ class Cabin < ApplicationRecord
   #Validaciones
   validates :name,
             presence: true,
-            length: {minimun: 3, maximum: 10 },
-            numericality: true
+            length: {minimun: 3, maximum: 20 }
 
   validates :tipo,
             presence: true,

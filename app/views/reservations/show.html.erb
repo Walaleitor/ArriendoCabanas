@@ -1,2 +1,8 @@
-<h1>Reservations#show</h1>
-<p>Find me in app/views/reservations/show.html.erb</p>
+<div class="container">
+  <h>Nombre</h>
+  <p><%= @reservation.customer.first_name + " " + @reservation.customer.last_name %></p>
+  <h>Fecha de Inicio</h>
+  <p><%= @reservation.start_date %> </p>
+  <h> Fecha de Termino</h>
+  <p><%= @reservation.end_date %></p>
+  </div>
