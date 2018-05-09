@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180504145353) do
+ActiveRecord::Schema.define(version: 20180509173105) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,9 +23,7 @@ ActiveRecord::Schema.define(version: 20180504145353) do
     t.bigint "cabin_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "payment_id"
     t.index ["cabin_id"], name: "index_bicycles_on_cabin_id"
-    t.index ["payment_id"], name: "index_bicycles_on_payment_id"
   end
 
   create_table "cabins", force: :cascade do |t|
@@ -52,7 +50,13 @@ ActiveRecord::Schema.define(version: 20180504145353) do
     t.bigint "reservation_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "product_id"
+    t.bigint "service_id"
+    t.bigint "bicycle_id"
+    t.index ["bicycle_id"], name: "index_payments_on_bicycle_id"
+    t.index ["product_id"], name: "index_payments_on_product_id"
     t.index ["reservation_id"], name: "index_payments_on_reservation_id"
+    t.index ["service_id"], name: "index_payments_on_service_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -63,9 +67,7 @@ ActiveRecord::Schema.define(version: 20180504145353) do
     t.bigint "cabin_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "payment_id"
     t.index ["cabin_id"], name: "index_products_on_cabin_id"
-    t.index ["payment_id"], name: "index_products_on_payment_id"
   end
 
   create_table "reservations", force: :cascade do |t|
@@ -88,18 +90,16 @@ ActiveRecord::Schema.define(version: 20180504145353) do
     t.bigint "cabin_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "payment_id"
     t.index ["cabin_id"], name: "index_services_on_cabin_id"
-    t.index ["payment_id"], name: "index_services_on_payment_id"
   end
 
   add_foreign_key "bicycles", "cabins"
-  add_foreign_key "bicycles", "payments"
+  add_foreign_key "payments", "bicycles"
+  add_foreign_key "payments", "products"
   add_foreign_key "payments", "reservations"
+  add_foreign_key "payments", "services"
   add_foreign_key "products", "cabins"
-  add_foreign_key "products", "payments"
   add_foreign_key "reservations", "cabins"
   add_foreign_key "reservations", "customers"
   add_foreign_key "services", "cabins"
-  add_foreign_key "services", "payments"
 end
