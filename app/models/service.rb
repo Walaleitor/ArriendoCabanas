@@ -1,4 +1,4 @@
 class Service < ApplicationRecord
-	has_one :payment
-	has_one :cabin
+	has_many :payments
+	belongs_to :cabin
 end

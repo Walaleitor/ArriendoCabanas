@@ -1,0 +1,23 @@
+<div class="container">
+  <table class="table table-bordered">
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Cantidad</th>
+      <th>Precio</th>
+    </tr>
+
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.description %></td>
+        <td><%= product.quantity %></td>
+        <td><%= product.price %> </td>
+
+      </tr>
+    <% end %>
+  </table>
+
+
+</div>
+

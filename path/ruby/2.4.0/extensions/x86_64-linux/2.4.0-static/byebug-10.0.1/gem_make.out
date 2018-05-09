@@ -1,0 +1,19 @@
+current directory: /home/seba/Repositorios/ArriendoCabanas/path/ruby/2.4.0/gems/byebug-10.0.1/ext/byebug
+/usr/local/bin/ruby -r ./siteconf20180509-3715-5i45je.rb extconf.rb
+creating Makefile
+
+current directory: /home/seba/Repositorios/ArriendoCabanas/path/ruby/2.4.0/gems/byebug-10.0.1/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /home/seba/Repositorios/ArriendoCabanas/path/ruby/2.4.0/gems/byebug-10.0.1/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+current directory: /home/seba/Repositorios/ArriendoCabanas/path/ruby/2.4.0/gems/byebug-10.0.1/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20180509-3715-lgofph/byebug
