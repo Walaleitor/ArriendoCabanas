@@ -4,8 +4,8 @@ class MarketsController < ApplicationController
 
   def show
     @cabin = Cabin.find(params[:id])
-    @products = @cabin.bicycles.all
-    @services = @cabin.products.all
-    @bicycles = @cabin.services.all
+    @services = @cabin.services.all
+    @bicycles = @cabin.bicycles.all
+    @products = @cabin.products.all
   end
 end

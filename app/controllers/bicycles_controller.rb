@@ -14,10 +14,10 @@ class BicyclesController < ApplicationController
   end
 
   def create
-    @cabin = Cabin.find(params[:cabin_id])
-    @bicycle = @cabin.bicycle.create(bicycle_params)
+    @cabin = Cabin.find(params[:id])
+    @bicycle = @cabin.bicycles.new(bicycle_params)
     if @bicycle.save
-      redirect_to (@bicycle)
+      redirect_to market_path(@bicycle)
     else
       render "new"
     end
@@ -48,6 +48,6 @@ class BicyclesController < ApplicationController
   end
 
   def bicycle_params
-    params.require(:bicycle).permit(:model, :ring_size, :type, :value)
+    params.require(:bicycle).permit(:model, :ring_size, :tipo, :value)
   end
 end

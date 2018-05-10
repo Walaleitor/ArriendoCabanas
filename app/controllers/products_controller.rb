@@ -14,10 +14,10 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @cabin = Cabin.find(params[:cabin_id])
-    @product = @cabin.product.create(product_params)
+    @cabin = Cabin.find(params[:id])
+    @product = @cabin.products.new(product_params)
     if @product.save
-      redirect_to (@product)
+      redirect_to market_path(@cabin)
     else
       render "new"
     end

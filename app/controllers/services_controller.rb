@@ -14,8 +14,8 @@ class ServicesController < ApplicationController
   end
 
   def create
-    @cabin = Cabin.find(params[:cabin_id])
-    @service = @cabin.service.create(service_params)
+    @cabin = Cabin.find(params[:id])
+    @service = @cabin.services.create(service_params)
     if @service.save
       redirect_to (@service)
     else
@@ -47,7 +47,7 @@ class ServicesController < ApplicationController
     @service = Service.find(params[:id])
   end
 
-  def product_params
+  def service_params
     params.require(:service).permit(:name, :quantity, :value)
   end
 end

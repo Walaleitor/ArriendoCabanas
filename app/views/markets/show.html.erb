@@ -1,4 +1,6 @@
 <div class="container">
+  <h1>Productos</h1>
+  <td><%= link_to 'Agregar', new_product_path, remote: true, :class => 'btn btn-primary' %></td>
   <table class="table table-bordered">
     <tr>
       <th>Nombre</th>
@@ -18,6 +20,46 @@
     <% end %>
   </table>
 
+  <h1>Servicios</h1>
+  <td><%= link_to 'Agregar', new_service_path, remote: true, :class => 'btn btn-primary' %></td>
+
+  <table class="table table-bordered">
+    <tr>
+      <th>Nombre</th>
+      <th>Cantidad</th>
+      <th>Precio</th>
+    </tr>
+
+    <% @services.each do |service| %>
+      <tr>
+        <td><%= service.name %></td>
+        <td><%= service.quantity %></td>
+        <td><%= service.value %></td>
+
+      </tr>
+    <% end %>
+  </table>
+
+  <h1>Bicicletas</h1>
+  <td><%= link_to 'Agregar', new_bicycle_path, remote: true, :class => 'btn btn-primary' %></td>
+  <table class="table table-bordered">
+    <tr>
+      <th>Modelo</th>
+      <th>Aro</th>
+      <th>Tipo</th>
+      <th>Precio</th>
+    </tr>
+
+    <% @bicycles.each do |bicycle| %>
+      <tr>
+        <td><%= bicycle.model %></td>
+        <td><%= bicycle.ring_size %></td>
+        <td><%= bicycle.tipo %></td>
+        <td><%= bicycle.value %> </td>
+
+      </tr>
+    <% end %>
+  </table>
 
 </div>
 

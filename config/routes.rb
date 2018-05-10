@@ -15,4 +15,13 @@ Rails.application.routes.draw do
   get 'reservations/:id ', to: 'reservations#show', as: 'reservation'
   get 'cabins/:id/show', to: 'markets#show', as: 'market'
 
+  get 'cabins/:id/products/new', to: 'products#new', as: 'new_product'
+  post 'cabins/:id/products/new', to: 'products#create'
+
+  get 'cabins/:id/services/new', to: 'services#new', as: 'new_service'
+  post 'cabins/:id/services/new', to: 'services#create'
+
+  get 'cabins/:id/bicycles/new', to: 'bicycles#new', as: 'new_bicycle'
+  post 'cabins/:id/bicycles/new', to: 'bicycles#create'
+
 end
