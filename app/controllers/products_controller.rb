@@ -10,11 +10,12 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @product = Product.new
+    @cabin = Cabin.find(params[:cabin_id])
+    @product = @cabin.products.new
   end
 
   def create
-    @cabin = Cabin.find(params[:id])
+    @cabin = Cabin.find(params[:cabin_id])
     @product = @cabin.products.new(product_params)
     if @product.save
       redirect_to market_path(@cabin)
@@ -30,7 +31,7 @@ class ProductsController < ApplicationController
   def update
     #set_params
     if @product.update(product_params)
-      redirect_to(@product)
+      redirect_back(fallback_location: 'something')
     else
       render "edit"
     end
@@ -44,7 +45,8 @@ class ProductsController < ApplicationController
   private
 
   def set_params
-    @product = Product.find(params[:id])
+    @cabin = Cabin.find(params[:cabin_id])
+    @product = @cabin.products.find(params[:id])
   end
 
   def product_params

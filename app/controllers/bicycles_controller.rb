@@ -10,14 +10,15 @@ class BicyclesController < ApplicationController
   end
 
   def new
-    @bicycle = Bicycle.new
+    @cabin = Cabin.find(params[:cabin_id])
+    @bicycle = @cabin.bicycles.new
   end
 
   def create
-    @cabin = Cabin.find(params[:id])
+    @cabin = Cabin.find(params[:cabin_id])
     @bicycle = @cabin.bicycles.new(bicycle_params)
     if @bicycle.save
-      redirect_to market_path(@bicycle)
+      redirect_to market_path(@cabin)
     else
       render "new"
     end
@@ -30,7 +31,7 @@ class BicyclesController < ApplicationController
   def update
     #set_params
     if @bicycle.update(bicycle_params)
-      redirect_to(@bicycle)
+      redirect_to market_path(@cabin)
     else
       render "edit"
     end
@@ -44,7 +45,8 @@ class BicyclesController < ApplicationController
   private
 
   def set_params
-    @bicycle = Bicycle.find(params[:id])
+    @cabin = Cabin.find(params[:cabin_id])
+    @bicycle = @cabin.bicycles.find(params[:id])
   end
 
   def bicycle_params

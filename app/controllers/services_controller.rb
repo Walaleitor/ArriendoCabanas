@@ -10,14 +10,15 @@ class ServicesController < ApplicationController
   end
 
   def new
-    @service = Service.new
+    @cabin = Cabin.find(params[:cabin_id])
+    @service = @cabin.services.new
   end
 
   def create
-    @cabin = Cabin.find(params[:id])
+    @cabin = Cabin.find(params[:cabin_id])
     @service = @cabin.services.create(service_params)
     if @service.save
-      redirect_to (@service)
+      redirect_to market_path(@cabin)
     else
       render "new"
     end
@@ -44,7 +45,8 @@ class ServicesController < ApplicationController
   private
 
   def set_params
-    @service = Service.find(params[:id])
+    @cabin = Cabin.find(params[:cabin_id])
+    @service = @cabin.services.find(params[:id])
   end
 
   def service_params

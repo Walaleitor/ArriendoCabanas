@@ -21,7 +21,7 @@
       <td><%= link_to 'Reserva', new_reservation_path(cabin), :class => 'btn btn-info'  %></td>
       <td><%= link_to 'Editar', edit_cabin_path(cabin), remote: true, :class => 'btn btn-warning'%></td>
       <td><%= link_to 'Mercados', market_path(cabin), :class  => 'btn btn-info' %></td>
-      <td><%= link_to 'Borrar', cabin_path(cabin), :class => 'btn btn-danger',
+      <td><%= link_to 'Borrar', cabin, :class => 'btn btn-danger',
                       method: :delete,
                       data: { confirm: '¿Estás seguro?' } %></td>
     </tr>
