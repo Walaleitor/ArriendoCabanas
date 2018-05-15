@@ -18,7 +18,7 @@
       <td><%= cabin.tipo %></td>
       <td><%= cabin.name %></td>
       <td><%= link_to 'Ver', cabin_path(cabin), :class  => 'btn btn-info' %></td>
-      <td><%= link_to 'Reserva', new_reservation_path(cabin), :class => 'btn btn-info'  %></td>
+      <td><%= link_to 'Reserva', new_cabin_reservation_path(cabin), :class => 'btn btn-info'  %></td>
       <td><%= link_to 'Editar', edit_cabin_path(cabin), remote: true, :class => 'btn btn-warning'%></td>
       <td><%= link_to 'Mercados', market_path(cabin), :class  => 'btn btn-info' %></td>
       <td><%= link_to 'Borrar', cabin, :class => 'btn btn-danger',

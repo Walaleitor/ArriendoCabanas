@@ -1,5 +1,5 @@
 <div class="container">
-  <%= form_for(@reservation, url: new_reservation_path, html: { role: "form" }) do |f| %>
+  <%= form_for [@cabin,@reservation]  do |f| %>
     <p>
       <%=f.label :start_date  %>
       <%= f.date_field :start_date %>
@@ -9,7 +9,7 @@
       <%= f.date_field :end_date %>
     </p>
     <p>
-      <%= f.collection_select :customer_id, Customer.all, :id, :first_name , class: "class-bootstrap" %>
+      <%= f.collection_select :customer_id, Customer.all, :id, :first_name  , class: "class-bootstrap" %>
 
     </p>
 

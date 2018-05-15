@@ -1,22 +1,22 @@
 class ReservationsController < ApplicationController
-  before_action :set_params, only: [:show, :edit, :update, :destroy]
+  before_action :set_params, only: [:edit, :update, :destroy]
 
   def index
     @reservations = Reservation.all
   end
 
   def show
-    #set_params
+    @reservation = Reservation.find(params[:id])
   end
 
   def new
-    @cabin = Cabin.find(params[:id])
+    @cabin = Cabin.find(params[:cabin_id])
     @reservation = @cabin.reservations.new
 
   end
 
   def create
-    @cabin = Cabin.find(params[:id])
+    @cabin = Cabin.find(params[:cabin_id])
     @reservation = @cabin.reservations.new(reservation_params)
     if @reservation.save
         redirect_to cabin_path(@cabin)
