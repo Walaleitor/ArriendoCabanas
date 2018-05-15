@@ -4,13 +4,15 @@ class Service < ApplicationRecord
 
 	#Validaciones
 	validates :name,
-			  presence: true,
-			  lenght: {minimun: 3, maximum: 40}
+			      presence: true,
+			      length: {minimun: 3, maximum: 40}
 
 	validates :quantity,
-			  presence: true,
-			  numericality: true
+			      presence: true,
+			      numericality: true
 
 	validates :value,
-			  presence: true,
-			  numericality: true
+			      presence: true,
+			      numericality: true
+
+  end

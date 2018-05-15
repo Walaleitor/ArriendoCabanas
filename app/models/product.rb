@@ -4,18 +4,18 @@ class Product < ApplicationRecord
 
 	#Validaciones
 	validates :name,
-			  presence: true,
-			  lenght: {minimun: 3, maximum: 20 }
+			  		presence: true,
+			  		length: {minimun: 3, maximum: 20 }
 
 	validates :description,
-			  presence: true,
-			  lenght: {minimun: 3, maximum: 40 }
+			  		presence: true,
+			  		length: {minimun: 3, maximum: 40 }
 
 	validates :quantity,
-			  presence: true,
-			  numericality: true
+					  presence: true,
+					  numericality: true
 
 	validates :price,
-			  presence: true,
-			  numericality: true
+					  presence: true,
+					  numericality: true
 end
