@@ -15,6 +15,7 @@ class CabinsController < ApplicationController
   #trae una cabaña respecto al id
   def show
     #set_cabin
+    @reservations = @cabin.reservations.all
   end
 
   #crea cabaña

@@ -1,18 +1,17 @@
 class ReservationsController < ApplicationController
-  before_action :set_params, only: [:edit, :update, :destroy]
+  before_action :set_params, only: [:show ,:edit, :update, :destroy]
 
   def index
     @reservations = Reservation.all
   end
 
   def show
-    @reservation = Reservation.find(params[:id])
+    #set_params
   end
 
   def new
     @cabin = Cabin.find(params[:cabin_id])
     @reservation = @cabin.reservations.new
-
   end
 
   def create
@@ -46,7 +45,8 @@ class ReservationsController < ApplicationController
   private
 
   def set_params
-    @reservation = Reservation.find(params[:id])
+    @cabin = Cabin.find(params[:cabin_id])
+    @reservation = @cabin.reservations.find(params[:id])
   end
 
   def reservation_params

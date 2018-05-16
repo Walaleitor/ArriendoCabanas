@@ -5,10 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'rut_validator'
 #Email Validator
 gem 'validates_email_format_of'
-#Rut Validator
-gem 'rut_validation'
 #bootstrap
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
@@ -49,6 +48,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  #annotate model, muestra schema en el modelo
+  gem 'annotate'
 end
 
 group :development do

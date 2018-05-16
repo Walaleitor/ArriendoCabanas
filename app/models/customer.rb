@@ -1,5 +1,20 @@
+# == Schema Information
+#
+# Table name: customers
+#
+#  id         :bigint(8)        not null, primary key
+#  address    :text
+#  email      :string
+#  first_name :string
+#  last_name  :string
+#  phone      :string
+#  rut        :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class Customer < ApplicationRecord
-   attr_accessor :rut
+
 
   #Relaciones
   has_many :reservations, :dependent => :delete_all
@@ -11,9 +26,8 @@ class Customer < ApplicationRecord
   validates_email_format_of :email, :message => 'is not looking good'
 
   validates :rut,
-            rut: true,
             presence: true,
-            uniqueness: true
+            rut: true
 
   validates :first_name,
              presence: true,

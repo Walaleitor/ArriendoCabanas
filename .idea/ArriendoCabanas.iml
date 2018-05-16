@@ -116,6 +116,16 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="annotate (vbundled(2.7.3)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/path/ruby/2.4.0/gems/annotate-2.7.3/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/path/ruby/2.4.0/gems/annotate-2.7.3/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="arel (vbundled(8.0.0)) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/path/ruby/2.4.0/gems/arel-8.0.0/lib" />
@@ -592,12 +602,12 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="rut_validation (vbundled(1.1.0)) [path][gem]">
+      <library name="rut_validator (vbundled(0.0.2)) [path][gem]">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/path/ruby/2.4.0/gems/rut_validation-1.1.0/lib" />
+          <root url="file://$MODULE_DIR$/path/ruby/2.4.0/gems/rut_validator-0.0.2/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/path/ruby/2.4.0/gems/rut_validation-1.1.0/lib" />
+          <root url="file://$MODULE_DIR$/path/ruby/2.4.0/gems/rut_validator-0.0.2/lib" />
         </SOURCES>
       </library>
     </orderEntry>
