@@ -17,7 +17,7 @@ class CustomersController < ApplicationController
     if @customer.save
       redirect_back(fallback_location: 'something')
     else
-      render "new"
+      render :new
     end
   end
 
