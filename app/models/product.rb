@@ -20,9 +20,10 @@
 #  fk_rails_...  (cabin_id => cabins.id)
 #
 
-class Product < ApplicationRecord
-	has_many :payments
+class Product < ApplicationRecord	
 	belongs_to :cabin
+	has_many :product_payments
+	has_many :reservations , through: :product_payments
 
 	#Validaciones
 	validates :name,

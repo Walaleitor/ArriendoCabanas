@@ -21,8 +21,9 @@
 #
 
 class Bicycle < ApplicationRecord
-	belongs_to :cabin
-	has_many :payments
+	belongs_to :cabin	
+	has_many :bicycle_payments
+	has_many :reservations , through: :bicycle_payments
 
 	#Validaciones
 	validates :model,

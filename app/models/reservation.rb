@@ -26,7 +26,14 @@
 class Reservation < ApplicationRecord
   belongs_to :customer
   belongs_to :cabin
-  has_one :payment
+  has_many :product_payments
+  has_many :products, through: :product_payments
+  has_many :bicycle_payments
+  has_many :bicycles, through: :bicycle_payments
+  has_many :bicycle_payments
+  has_many :bicycles, through: :bicycle_payments
+
+
 
   #Validaciones
   validates_presence_of :end_date, :start_date
@@ -51,5 +58,5 @@ class Reservation < ApplicationRecord
   end
 
 
-  
+
 end

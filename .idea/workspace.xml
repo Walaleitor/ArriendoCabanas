@@ -2,39 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="531931c2-777f-4290-86b5-caf0477533cf" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/ArriendoCabanas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ArriendoCabanas.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/cabins_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/cabins_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/reservations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/reservations_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/bicycle.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/bicycle.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/cabin.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/cabin.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/customer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/customer.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/payment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/payment.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/product.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/product.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/reservation.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/reservation.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/service.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/service.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/cabins/show.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cabins/show.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/products/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reservations/index.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reservations/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/reservations/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/bicycles.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/bicycles.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/cabins.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/cabins.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/customers.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/customers.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/payments.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/payments.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/products.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/products.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/reservations.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/reservations.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/services.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/bicycle_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/bicycle_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/cabin_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/cabin_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/customer_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/customer_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/payment_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/payment_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/product_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/product_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/reservation_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/reservation_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/service_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/service_test.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -65,38 +40,70 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="customer.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="customer.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/customer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            <state relative-caret-position="420">
+              <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.js.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/customers/new.js.erb">
+      <file leaf-file-name="service.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/service.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-column="66" />
+            <state relative-caret-position="345">
+              <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_formulario.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/customers/_formulario.html.erb">
+      <file leaf-file-name="reservation.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/reservation.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="467">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bicycle_payment.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/bicycle_payment.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product_payment.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/product_payment.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="bicycle.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/bicycle.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/product.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cabin.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/cabin.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -110,47 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="20180504145353_add_state_and_total_reservations.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20180504145353_add_state_and_total_reservations.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
               <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20180516014020_cambiar_tipo_rut_2.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20180516014020_cambiar_tipo_rut_2.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20180516013815_cambiar_tipo_rut.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20180516013815_cambiar_tipo_rut.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20180509164112_remove_column_products_bicycles_services.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20180509164112_remove_column_products_bicycles_services.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="73" selection-start-column="73" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -179,7 +150,6 @@
         <option value="$PROJECT_DIR$/db/migrate/20180504145353_add_state_and_total_reservations.rb" />
         <option value="$PROJECT_DIR$/app/controllers/payments_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/reservations/index.json.jbuilder" />
-        <option value="$PROJECT_DIR$/app/models/reservation.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180509162756_remove_foreignkey_products_bicycles_services.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180509163421_remove_index_products_bicycles_services.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180509164112_remove_column_products_bicycles_services.rb" />
@@ -206,9 +176,6 @@
         <option value="$PROJECT_DIR$/app/controllers/bicycles_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/bicycles/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/markets/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/service.rb" />
-        <option value="$PROJECT_DIR$/app/models/bicycle.rb" />
-        <option value="$PROJECT_DIR$/app/models/product.rb" />
         <option value="$PROJECT_DIR$/app/views/cabins/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/reservations/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/cabins/show.html.erb" />
@@ -223,6 +190,10 @@
         <option value="$PROJECT_DIR$/db/migrate/20180516014020_cambiar_tipo_rut_2.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/models/customer.rb" />
+        <option value="$PROJECT_DIR$/app/models/reservation.rb" />
+        <option value="$PROJECT_DIR$/app/models/service.rb" />
+        <option value="$PROJECT_DIR$/app/models/bicycle.rb" />
+        <option value="$PROJECT_DIR$/app/models/product.rb" />
       </list>
     </option>
   </component>
@@ -238,7 +209,7 @@
       <path value="$PROJECT_DIR$/path/ruby/2.4.0/gems/railties-5.1.5/lib/rails/generators/rails/app/templates/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="-1" />
     <option name="width" value="960" />
     <option name="height" value="1035" />
@@ -248,7 +219,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -306,7 +277,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -314,7 +285,7 @@
     <property name="RunAnythingHistoryKey" value="add_reference :products, :user, index: true&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../controldespacho" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -497,11 +468,12 @@
       <workItem from="1526351969931" duration="2178000" />
       <workItem from="1526407905718" duration="4260000" />
       <workItem from="1526424410389" duration="7124000" />
+      <workItem from="1530121750789" duration="407000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199286000" />
+    <option name="totallyTimeSpent" value="199693000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -513,28 +485,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-1" width="1920" height="1036" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19166666" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298193" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3298193" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32969603" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3298193" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32917318" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19166666" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32969603" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32917318" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -549,20 +521,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180424185625_add_foreign_key_to_customers.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180509171945_add_index_bicycles_products_services_to_payments.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20180424213200_add_foreingkey.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -606,24 +564,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/payment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/payment.rb" />
     <entry file="file://$APPLICATION_HOME_DIR$/rubystubs24/array.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
           <caret line="1736" column="8" selection-start-line="1736" selection-start-column="8" selection-end-line="1736" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/reservation.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="46" lean-forward="true" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -690,13 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/service.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/bicycles_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -708,20 +646,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/bicycle.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/product.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
@@ -760,13 +684,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/reservations/index.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/reservations/index.json.jbuilder" />
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -823,13 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/cabin.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -861,7 +772,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/customers/new.js.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret selection-end-column="66" />
+          <caret selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -895,8 +806,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/customer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        <state relative-caret-position="420">
+          <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/reservation.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/bicycle_payment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/product_payment.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/service.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/bicycle.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/product.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/cabin.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>

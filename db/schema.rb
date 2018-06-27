@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180627025747) do
+ActiveRecord::Schema.define(version: 20180627172257) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bicycle_payments", force: :cascade do |t|
+    t.integer "amount"
+    t.bigint "reservation_id"
+    t.bigint "bicycle_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bicycle_id"], name: "index_bicycle_payments_on_bicycle_id"
+    t.index ["reservation_id"], name: "index_bicycle_payments_on_reservation_id"
+  end
 
   create_table "bicycles", force: :cascade do |t|
     t.string "model"
@@ -44,6 +54,16 @@ ActiveRecord::Schema.define(version: 20180627025747) do
     t.string "rut"
   end
 
+  create_table "product_payments", force: :cascade do |t|
+    t.integer "amount"
+    t.bigint "reservation_id"
+    t.bigint "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_product_payments_on_product_id"
+    t.index ["reservation_id"], name: "index_product_payments_on_reservation_id"
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -68,6 +88,16 @@ ActiveRecord::Schema.define(version: 20180627025747) do
     t.index ["customer_id"], name: "index_reservations_on_customer_id"
   end
 
+  create_table "service_payments", force: :cascade do |t|
+    t.integer "amount"
+    t.bigint "reservation_id"
+    t.bigint "service_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["reservation_id"], name: "index_service_payments_on_reservation_id"
+    t.index ["service_id"], name: "index_service_payments_on_service_id"
+  end
+
   create_table "services", force: :cascade do |t|
     t.string "name"
     t.string "quantity"
@@ -78,9 +108,15 @@ ActiveRecord::Schema.define(version: 20180627025747) do
     t.index ["cabin_id"], name: "index_services_on_cabin_id"
   end
 
+  add_foreign_key "bicycle_payments", "bicycles"
+  add_foreign_key "bicycle_payments", "reservations"
   add_foreign_key "bicycles", "cabins"
+  add_foreign_key "product_payments", "products"
+  add_foreign_key "product_payments", "reservations"
   add_foreign_key "products", "cabins"
   add_foreign_key "reservations", "cabins"
   add_foreign_key "reservations", "customers"
+  add_foreign_key "service_payments", "reservations"
+  add_foreign_key "service_payments", "services"
   add_foreign_key "services", "cabins"
 end

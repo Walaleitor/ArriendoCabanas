@@ -20,8 +20,9 @@
 #
 
 class Service < ApplicationRecord
-	has_many :payments
 	belongs_to :cabin
+	has_many :service_payments
+	has_many :reservations , through: :service_payments
 
 	#Validaciones
 	validates :name,
