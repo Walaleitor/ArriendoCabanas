@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180516014020) do
+ActiveRecord::Schema.define(version: 20180627025747) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,21 +42,6 @@ ActiveRecord::Schema.define(version: 20180516014020) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "rut"
-  end
-
-  create_table "payments", force: :cascade do |t|
-    t.integer "amount"
-    t.date "payment_date"
-    t.bigint "reservation_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "product_id"
-    t.bigint "service_id"
-    t.bigint "bicycle_id"
-    t.index ["bicycle_id"], name: "index_payments_on_bicycle_id"
-    t.index ["product_id"], name: "index_payments_on_product_id"
-    t.index ["reservation_id"], name: "index_payments_on_reservation_id"
-    t.index ["service_id"], name: "index_payments_on_service_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -94,10 +79,6 @@ ActiveRecord::Schema.define(version: 20180516014020) do
   end
 
   add_foreign_key "bicycles", "cabins"
-  add_foreign_key "payments", "bicycles"
-  add_foreign_key "payments", "products"
-  add_foreign_key "payments", "reservations"
-  add_foreign_key "payments", "services"
   add_foreign_key "products", "cabins"
   add_foreign_key "reservations", "cabins"
   add_foreign_key "reservations", "customers"
