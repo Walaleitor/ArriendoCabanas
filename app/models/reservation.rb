@@ -37,7 +37,7 @@ class Reservation < ApplicationRecord
 
   #Validaciones
   validates_presence_of :end_date, :start_date
-  validate :validar_orden_fechas, :solo_reservas_futuras
+  validate :validar_orden_fechas, :solo_reservas_futuras, :validar_con_demas_reservas
 
   def solo_reservas_futuras
       if start_date.year == Date.today.year && start_date.month == Date.today.month && start_date.day < Date.today.day
@@ -57,6 +57,16 @@ class Reservation < ApplicationRecord
     end
   end
 
+  def validar_con_demas_reservas
+    reservas = Reservation.all
+    reservas.each do |reserva|
+      if start_date > reserva.start_date && start_date < reserva.end_date
+        errors.add(:start_date, "la fecha de inicio ya esta reservada")
+      elsif end_date > reserva.start_date && end_date < reserva.end_date
+        errors.add(:end_date, "la fecha de termino ya esta reservada")
+      end
+    end
 
+  end
 
 end
