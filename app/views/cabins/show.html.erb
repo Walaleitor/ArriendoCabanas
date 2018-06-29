@@ -1,13 +1,17 @@
 <div class="container">
   <div id="calendar"></div>
   <p><%= link_to 'Reserva', new_cabin_reservation_path(@cabin), :class => 'btn btn-info'  %></p>
-
-
-  <script >
-      $(document).ready(function () {
-          $("#calendar").fullCalendar({
-                events: "/cabins/<%="#{@cabin.id}"%>.json"
-          });
-      });
-  </script>
+  <%= hidden_field_tag 'cabin_url', cabin_path(@cabin, format: 'json') %>
 </div>
+
+<script>
+$(document).on("turbolinks:before-cache", function() {
+  $('#calendar').fullCalendar('destroy');
+})
+
+$(document).ready(function (){
+  $("#calendar").fullCalendar({
+    events: $('#cabin_url').val()
+  });
+})
+</script>

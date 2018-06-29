@@ -3,6 +3,37 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ArriendoCabanas.iml" filepath="$PROJECT_DIR$/.idea/ArriendoCabanas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressable-2.5.2.iml" filepath="$PROJECT_DIR$/.idea/modules/addressable-2.5.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/autoprefixer-rails-8.2.0.iml" filepath="$PROJECT_DIR$/.idea/modules/autoprefixer-rails-8.2.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bindex-0.5.0.iml" filepath="$PROJECT_DIR$/.idea/modules/bindex-0.5.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bootstrap-4.0.0.iml" filepath="$PROJECT_DIR$/.idea/modules/bootstrap-4.0.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/childprocess-0.9.0.iml" filepath="$PROJECT_DIR$/.idea/modules/childprocess-0.9.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/crass-1.0.3.iml" filepath="$PROJECT_DIR$/.idea/modules/crass-1.0.3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ffi-1.9.23.iml" filepath="$PROJECT_DIR$/.idea/modules/ffi-1.9.23.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fullcalendar-rails-3.4.0.0.iml" filepath="$PROJECT_DIR$/.idea/modules/fullcalendar-rails-3.4.0.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jbuilder-2.7.0.iml" filepath="$PROJECT_DIR$/.idea/modules/jbuilder-2.7.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jquery-rails-4.3.1.iml" filepath="$PROJECT_DIR$/.idea/modules/jquery-rails-4.3.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jquery-ui-rails-6.0.1.iml" filepath="$PROJECT_DIR$/.idea/modules/jquery-ui-rails-6.0.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/loofah-2.2.1.iml" filepath="$PROJECT_DIR$/.idea/modules/loofah-2.2.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/method_source-0.9.0.iml" filepath="$PROJECT_DIR$/.idea/modules/method_source-0.9.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mini_mime-1.0.0.iml" filepath="$PROJECT_DIR$/.idea/modules/mini_mime-1.0.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mini_portile2-2.3.0.iml" filepath="$PROJECT_DIR$/.idea/modules/mini_portile2-2.3.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nio4r-2.3.0.iml" filepath="$PROJECT_DIR$/.idea/modules/nio4r-2.3.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nokogiri-1.8.2.iml" filepath="$PROJECT_DIR$/.idea/modules/nokogiri-1.8.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/public_suffix-3.0.2.iml" filepath="$PROJECT_DIR$/.idea/modules/public_suffix-3.0.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rake-12.3.0.iml" filepath="$PROJECT_DIR$/.idea/modules/rake-12.3.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rb-fsevent-0.10.3.iml" filepath="$PROJECT_DIR$/.idea/modules/rb-fsevent-0.10.3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rb-inotify-0.9.10.iml" filepath="$PROJECT_DIR$/.idea/modules/rb-inotify-0.9.10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rut_validation-1.1.0.iml" filepath="$PROJECT_DIR$/.idea/modules/rut_validation-1.1.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rut_validator-0.0.2.iml" filepath="$PROJECT_DIR$/.idea/modules/rut_validator-0.0.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/selenium-webdriver-3.11.0.iml" filepath="$PROJECT_DIR$/.idea/modules/selenium-webdriver-3.11.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-watcher-listen-2.0.1.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-watcher-listen-2.0.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/templates.iml" filepath="$PROJECT_DIR$/.idea/modules/templates.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/templates1.iml" filepath="$PROJECT_DIR$/.idea/modules/templates1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/thread_safe-0.3.6.iml" filepath="$PROJECT_DIR$/.idea/modules/thread_safe-0.3.6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tilt-2.0.8.iml" filepath="$PROJECT_DIR$/.idea/modules/tilt-2.0.8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/uglifier-4.1.8.iml" filepath="$PROJECT_DIR$/.idea/modules/uglifier-4.1.8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/validates_email_format_of-1.6.3.iml" filepath="$PROJECT_DIR$/.idea/modules/validates_email_format_of-1.6.3.iml" />
     </modules>
   </component>
 </project>

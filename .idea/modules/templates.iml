@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="RUBY_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="RailsFacetType" name="Ruby on Rails">
+      <configuration>
+        <RAILS_FACET_CONFIG_ID NAME="RAILS_FACET_SUPPORT_REMOVED" VALUE="false" />
+        <RAILS_FACET_CONFIG_ID NAME="RAILS_TESTS_SOURCES_PATCHED" VALUE="true" />
+        <RAILS_FACET_CONFIG_ID NAME="RAILS_FACET_APPLICATION_ROOT" VALUE="$MODULE_DIR$/../../path/ruby/2.4.0/gems/railties-5.1.5/lib/rails/generators/rails/app/templates" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="ModuleRunConfigurationManager">
+    <shared />
+  </component>
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/../../path/ruby/2.4.0/gems/railties-5.1.5/lib/rails/generators/rails/app/templates">
+      <sourceFolder url="file://$MODULE_DIR$/../../path/ruby/2.4.0/gems/railties-5.1.5/lib/rails/generators/rails/app/templates/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../path/ruby/2.4.0/gems/railties-5.1.5/lib/rails/generators/rails/app/templates/spec" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/../../path/ruby/2.4.0/gems/railties-5.1.5/lib/rails/generators/rails/app/templates/.bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../path/ruby/2.4.0/gems/railties-5.1.5/lib/rails/generators/rails/app/templates/components" />
+      <excludeFolder url="file://$MODULE_DIR$/../../path/ruby/2.4.0/gems/railties-5.1.5/lib/rails/generators/rails/app/templates/public/system" />
+      <excludeFolder url="file://$MODULE_DIR$/../../path/ruby/2.4.0/gems/railties-5.1.5/lib/rails/generators/rails/app/templates/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/../../path/ruby/2.4.0/gems/railties-5.1.5/lib/rails/generators/rails/app/templates/vendor/bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../path/ruby/2.4.0/gems/railties-5.1.5/lib/rails/generators/rails/app/templates/vendor/cache" />
+    </content>
+    <orderEntry type="jdk" jdkName="rbenv: 2.5.1" jdkType="RUBY_SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="addressable (v2.5.2, rbenv: 2.5.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.16.2, rbenv: 2.5.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="capybara (v2.18.0, rbenv: 2.5.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="childprocess (v0.9.0, rbenv: 2.5.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ffi (v1.9.25, rbenv: 2.5.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mini_mime (v1.0.0, rbenv: 2.5.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mini_portile2 (v2.3.0, rbenv: 2.5.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.8.3, rbenv: 2.5.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="public_suffix (v3.0.2, rbenv: 2.5.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack (v2.0.5, rbenv: 2.5.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack-test (v1.0.0, rbenv: 2.5.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubyzip (v1.2.1, rbenv: 2.5.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v3.13.0, rbenv: 2.5.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="xpath (v3.1.0, rbenv: 2.5.1) [gem]" level="application" />
+  </component>
+  <component name="RubyModuleProperties">
+    <option name="autoCreated" value="true" />
+  </component>
+</module>
