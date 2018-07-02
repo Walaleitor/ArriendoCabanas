@@ -6,7 +6,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title"><%= title %></h4>
       </div>
-         <%= form_for @customer do |f| %>
+         <%= form_for [@customer] do |f| %>
           <% if @customer.errors.any? %>
               <div id="error_explanation">
                 <h2>
@@ -43,7 +43,7 @@
             <%=f.label :Teléfono %></br>
             <%=f.text_field :phone %>
             </p>
-            <div class="row">
+             <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4"><%=f.submit :Guardar, :class => 'btn btn-info'%></div>
             <div class="col-md-4"></div>

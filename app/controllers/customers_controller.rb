@@ -12,15 +12,14 @@ class CustomersController < ApplicationController
     @customer = Customer.new
   end
 
-  def create
-    @customer = Customer.new(customer_params)
+ def create
+    @customer = @customer.new(customer_params)
     if @customer.save
-      redirect_back(fallback_location: 'something')
+      redirect_to customer_path
     else
       render :new
     end
   end
-
   def edit
   end
 
@@ -41,6 +40,7 @@ class CustomersController < ApplicationController
 
   def set_params
     @customer = Customer.find(params[:id])
+    @cabin = Cabin.find(params[:cabin_id])
   end
 
   def customer_params
