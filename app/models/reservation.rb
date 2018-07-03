@@ -4,9 +4,9 @@
 #
 #  id          :bigint(8)        not null, primary key
 #  end_date    :date
+#  price       :integer
 #  start_date  :date
-#  state       :string
-#  total       :integer
+#  state       :string           default("sin pagar")
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  cabin_id    :bigint(8)
@@ -36,7 +36,7 @@ class Reservation < ApplicationRecord
 
 
   #Validaciones
-  validates_presence_of :end_date, :start_date
+  validates_presence_of :end_date, :start_date, :price
   validate :validar_orden_fechas, :solo_reservas_futuras, :validar_con_demas_reservas
 
   def solo_reservas_futuras

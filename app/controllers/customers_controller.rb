@@ -13,13 +13,15 @@ class CustomersController < ApplicationController
   end
 
  def create
-    @customer = @customer.new(customer_params)
+    @customer = Customer.new(customer_params)
     if @customer.save
-      redirect_to customer_path
+      redirect_back(fallback_location: 'something')
     else
-      render :new
+      redirect :new
     end
-  end
+ end
+
+
   def edit
   end
 

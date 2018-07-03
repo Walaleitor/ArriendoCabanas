@@ -33,7 +33,9 @@ ActiveRecord::Schema.define(version: 20180627172257) do
     t.bigint "cabin_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "payment_id"
     t.index ["cabin_id"], name: "index_bicycles_on_cabin_id"
+    t.index ["payment_id"], name: "index_bicycles_on_payment_id"
   end
 
   create_table "cabins", force: :cascade do |t|
@@ -72,7 +74,9 @@ ActiveRecord::Schema.define(version: 20180627172257) do
     t.bigint "cabin_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "payment_id"
     t.index ["cabin_id"], name: "index_products_on_cabin_id"
+    t.index ["payment_id"], name: "index_products_on_payment_id"
   end
 
   create_table "reservations", force: :cascade do |t|
@@ -82,8 +86,8 @@ ActiveRecord::Schema.define(version: 20180627172257) do
     t.bigint "customer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "state"
-    t.integer "total"
+    t.string "state", default: "sin pagar"
+    t.integer "price"
     t.index ["cabin_id"], name: "index_reservations_on_cabin_id"
     t.index ["customer_id"], name: "index_reservations_on_customer_id"
   end
@@ -105,7 +109,9 @@ ActiveRecord::Schema.define(version: 20180627172257) do
     t.bigint "cabin_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "payment_id"
     t.index ["cabin_id"], name: "index_services_on_cabin_id"
+    t.index ["payment_id"], name: "index_services_on_payment_id"
   end
 
   add_foreign_key "bicycle_payments", "bicycles"

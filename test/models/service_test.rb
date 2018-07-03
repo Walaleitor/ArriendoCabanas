@@ -9,10 +9,12 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  cabin_id   :bigint(8)
+#  payment_id :bigint(8)
 #
 # Indexes
 #
-#  index_services_on_cabin_id  (cabin_id)
+#  index_services_on_cabin_id    (cabin_id)
+#  index_services_on_payment_id  (payment_id)
 #
 # Foreign Keys
 #

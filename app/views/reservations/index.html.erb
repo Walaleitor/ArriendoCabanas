@@ -1,24 +1,33 @@
 <div class="container">
-<table>
-  <thead>
-  <tr>
-    <th>tipo</th>
-    <th>description</th>
-    
-  </tr>
-  </thead>
-  <tbody>
-  <%@reservations.each do |reservation| %>
+<div class="row">
+  <div class="col-sm-4">
+    <h3>Reservas</h3>
+  </div>
+  <table class="table table-bordered">
+    <thead>
     <tr>
-      <td><%= reservation.start_date %></td>
-      <td><%= reservation.end_date %>
+      <th>Nombre</th>
+      <th>Rut</th>
+      <th>Fecha de inicio</th>
+      <th>Fecha de Termino</th>
 
     </tr>
-  <% end %>
-  </br>
-  <div id="calendar"></div>
+    </thead>
+    <tbody>
+    <%@reservations.each do |reservation| %>
+      <tr>
+        <td><%= reservation.customer.first_name + " " + reservation.customer.last_name%></td>
+        <td><%= reservation.customer.rut %></td>
+        <td><%= reservation.start_date %></td>
+        <td><%= reservation.end_date %>
+      </tr>
+    <% end %>
+    </br>
+    <div id="calendar"></div>
 
-  </tbody>
-</table>
-</br>
+    </tbody>
+  </table>
+  </br>
+
+</div>
 </div>

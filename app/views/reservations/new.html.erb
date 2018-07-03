@@ -12,6 +12,18 @@
         </ul>
       </div>
     <% end %>
+    <% if @cabin.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@cabin.errors.count, "error") %>
+          </h2>
+          <ul>
+            <% @cabin.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
     <p>
       <%=f.label :'Fecha de Entrada'  %></br>
@@ -22,12 +34,17 @@
       <%= f.date_field :end_date %>
     </p>
     <p>
+      <%= f.label :'Precio' %>
+      <%= f.text_field :price %>
+
+    </p>
+    <p>
       <%=f.label :'Cliente' %></br>
       <%= f.collection_select :customer_id, Customer.all, :id, :first_name  , class: "class-bootstrap" %>
 
     </p>
 
     <%=f.submit :'Crear Reservación', :class  => 'btn btn-info' %>
-    <%= link_to 'Crear Cliente', new_customer_path, remote: true , :class  => 'btn btn-info' %>
+    <%= link_to 'Crear Cliente', new_customer_path(@cabin), remote: true , :class  => 'btn btn-info' %>
   <% end %>
 </div>

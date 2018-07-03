@@ -4,9 +4,9 @@
 #
 #  id          :bigint(8)        not null, primary key
 #  end_date    :date
+#  price       :integer
 #  start_date  :date
-#  state       :string
-#  total       :integer
+#  state       :string           default("sin pagar")
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  cabin_id    :bigint(8)
