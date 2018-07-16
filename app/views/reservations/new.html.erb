@@ -1,4 +1,7 @@
 <div class="container">
+  <h1>Reserva</h1>
+  <p>La reserva se considera por noche </p>
+  <p>Es decir se considera desde el medio dia de la fecha de inicio, hasta el medio dia del dia de la fecha de termino.</p>
   <%= form_for [@cabin,@reservation]  do |f| %>
   <% if @reservation.errors.any? %>
       <div id="error_explanation">
@@ -39,12 +42,21 @@
 
     </p>
     <p>
-      <%=f.label :'Cliente' %></br>
-      <%= f.collection_select :customer_id, Customer.all, :id, :first_name  , class: "class-bootstrap" %>
+      <% if @customers.empty? %>
+        <p>
+          No hay clientes, por favor registra un cliente
+            <%= link_to 'Crear Cliente', new_customer_path(@cabin), remote: true , :class  => 'btn btn-info' %>
+        </p>
+      <% else %>
+          <%=f.label :'Cliente' %></br>
+          <%= f.collection_select :customer_id, Customer.all, :id, :first_name  , class: "class-bootstrap" %>
+            <%= link_to 'Crear Cliente', new_customer_path(@cabin), remote: true , :class  => 'btn btn-info' %>
 
+
+        <% end %>
     </p>
 
-    <%=f.submit :'Crear Reservación', :class  => 'btn btn-info' %>
-    <%= link_to 'Crear Cliente', new_customer_path(@cabin), remote: true , :class  => 'btn btn-info' %>
+    <%=f.submit :'Crear Reserva', :class  => 'btn btn-info' %>
+    
   <% end %>
 </div>

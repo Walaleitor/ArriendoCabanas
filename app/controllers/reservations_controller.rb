@@ -12,6 +12,7 @@ class ReservationsController < ApplicationController
   def new
     @cabin = Cabin.find(params[:cabin_id])
     @reservation = @cabin.reservations.new
+    @customers = Customer.all
   end
 
   def create

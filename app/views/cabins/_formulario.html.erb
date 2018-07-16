@@ -8,10 +8,6 @@
       </div>
       <%= form_for(@cabin) do |f| %>
         <p>
-        <%=f.label :Tipo   %></br>
-        <%=f.text_field :tipo %>
-        </p>
-        <p>
         <%=f.label :Nombre %></br>
         <%=f.text_field :name %>
         </p>
@@ -19,7 +15,7 @@
             <div class="col-md-4"></div>
             <div class="col-md-4"><%=f.submit :Guardar, :class => 'btn btn-info'%></div>
             <div class="col-md-4"></div>
-            </div> 
+            </div>
             <% end %>
             </div>
         </div>
