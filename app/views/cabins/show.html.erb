@@ -9,9 +9,15 @@ $(document).on("turbolinks:before-cache", function() {
   $('#calendar').fullCalendar('destroy');
 })
 
-$(document).ready(function (){
-  $("#calendar").fullCalendar({
-    events: $('#cabin_url').val()
-  });
-})
+
+
+
+      $(document).ready(function () {
+          $("#calendar").fullCalendar({
+                events: "/cabins/<%="#{@cabin.id}"%>.json"
+          });
+     });
+
+
+
 </script>

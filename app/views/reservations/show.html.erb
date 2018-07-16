@@ -7,4 +7,7 @@
   <p><%= @reservation.start_date %> </p>
   <h> Fecha de Termino</h>
   <p><%= @reservation.end_date %></p>
-  </div>
+  <h>Estado</h>
+  <p><%= @reservation.state %></p>
+
+  <p><%= link_to 'Actualizar', edit_cabin_reservation_path(@cabin,@reservation), remote: true ,:class => 'btn btn-info'  %></p>

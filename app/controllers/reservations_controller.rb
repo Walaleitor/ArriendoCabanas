@@ -1,5 +1,5 @@
 class ReservationsController < ApplicationController
-  before_action :set_params, only: [:show ,:edit, :update, :destroy]
+  before_action :set_params, only: [:show, :edit, :update, :destroy]
 
   def index
     @reservations = Reservation.all
@@ -26,13 +26,13 @@ class ReservationsController < ApplicationController
   end
 
   def edit
-    #set_params
+
   end
 
   def update
-    #set_params
-    if @reservation.update(reservation_params)
-      redirect_to(@reservation)
+    
+    if @reservation.update(reservation_edit_params)
+      redirect_to cabin_reservation_path(@cabin,@reservation)
     else
       render "edit"
     end
@@ -48,6 +48,10 @@ class ReservationsController < ApplicationController
   def set_params
     @cabin = Cabin.find(params[:cabin_id])
     @reservation = @cabin.reservations.find(params[:id])
+  end
+
+  def reservation_edit_params
+    params.require(:reservation).permit(:start_date, :end_date, :price, :state)
   end
 
   def reservation_params
