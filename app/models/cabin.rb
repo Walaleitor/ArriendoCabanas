@@ -4,7 +4,6 @@
 #
 #  id         :bigint(8)        not null, primary key
 #  name       :string
-#  tipo       :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -21,7 +20,5 @@ class Cabin < ApplicationRecord
             presence: true,
             length: {minimun: 3, maximum: 20 }
 
-  validates :tipo,
-            presence: true,
-            numericality: true
+
 end

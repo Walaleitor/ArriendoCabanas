@@ -52,7 +52,7 @@ class CabinsController < ApplicationController
   private
 
   def cabin_params
-    params.require(:cabin).permit(:tipo, :name)
+    params.require(:cabin).permit(:name)
   end
 
   def set_cabin
