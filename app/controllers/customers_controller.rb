@@ -17,7 +17,7 @@ class CustomersController < ApplicationController
     if @customer.save
       redirect_back(fallback_location: 'something')
     else
-      redirect :new
+      render "new"
     end
  end
 
@@ -42,7 +42,6 @@ class CustomersController < ApplicationController
 
   def set_params
     @customer = Customer.find(params[:id])
-    @cabin = Cabin.find(params[:cabin_id])
   end
 
   def customer_params
