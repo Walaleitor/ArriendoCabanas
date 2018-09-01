@@ -2,28 +2,34 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
+        <div class="form-horizontal">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title"><%= title %></h4>
       </div>
         <%= form_for [@cabin,@product]   do |f| %>
           <p>
-          <%=f.label :name  %>
+          <%=f.label :Nombre  %></br>
           <%=f.text_field :name %>
           </p>
           <p>
-          <%=f.label :description %>
+          <%=f.label :Descripcion %></br>
           <%=f.text_field :description %>
           </p>
           <p>
-          <%=f.label :quantity %>
+          <%=f.label :Cantidad %></br>
           <%=f.text_field :quantity %>
           </p>
           <p>
-          <%=f.label :price %>
+          <%=f.label :Precio %></br>
           <%=f.text_field :price %>
           </p>
-          <%=f.submit %>
+          <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4"><%=f.submit :Guardar, :class => 'btn btn-info'%></div>
+          <div class="col-md-4"></div>
+          </div>
         <% end %>
+      </div>
     </div>
   </div>
 </div>
