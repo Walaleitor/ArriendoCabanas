@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 devise_scope :user do
   authenticated :user do
     root 'cabins#index', as: :authenticated_root
+
   end
 
   unauthenticated do
