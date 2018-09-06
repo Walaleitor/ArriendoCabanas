@@ -39,6 +39,9 @@ class Reservation < ApplicationRecord
   validates_presence_of :end_date, :start_date, :price
   validate :validar_orden_fechas, :solo_reservas_futuras, :validar_con_demas_reservas
 
+  
+  
+
   def solo_reservas_futuras
       if start_date.year == Date.today.year && start_date.month == Date.today.month && start_date.day < Date.today.day
         errors.add(:start_date, "No se pueden hacer reservas en el pasado")

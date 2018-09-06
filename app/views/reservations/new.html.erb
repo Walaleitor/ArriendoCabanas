@@ -42,19 +42,14 @@
 
     </p>
     <p>
-      <% if @customers.empty? %>
-        <p>
-          No hay clientes, por favor registra un cliente
-            <%= link_to 'Crear Cliente', new_customer_path(@cabin), remote: true , :class  => 'btn btn-info' %>
-        </p>
-      <% else %>
-          <%=f.label :'Cliente' %></br>
-          <%= f.collection_select :customer_id, Customer.all, :id, :first_name  , class: "class-bootstrap" %>
-            <%= link_to 'Crear Cliente', new_customer_path(@cabin), remote: true , :class  => 'btn btn-info' %>
+      
+    <%=f.label :'Cliente' %></br>
+          
+    <%= f.collection_select :customer_id, Customer.all, :id, :select_client , class: "class-bootstrap" %>
+    <%= link_to 'Crear Cliente', new_customer_path(@cabin), remote: true , :class  => 'btn btn-info' %>
 
 
-        <% end %>
-    </p>
+    
 
     <%=f.submit :'Crear Reserva', :class  => 'btn btn-info' %>
     

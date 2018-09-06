@@ -25,6 +25,11 @@ class Customer < ApplicationRecord
   validates_presence_of  :email, :address, :phone
   validates_email_format_of :email, :message => 'is not looking good'
 
+
+  def select_client
+    "#{first_name} #{last_name} + #{rut}"
+  end
+
   validates :rut,
             presence: true,
             rut: true
@@ -36,6 +41,8 @@ class Customer < ApplicationRecord
   validates :last_name,
              presence: true,
              length: {minimum: 2,maximum: 10}
+
+  
 
 
 end

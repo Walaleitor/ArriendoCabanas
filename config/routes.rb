@@ -17,6 +17,9 @@ end
   get 'reservations', to: 'reservations#index', as: 'reservations'
   #get 'reservations/:id ', to: 'reservations#show', as: 'reservation'
   get 'cabins/:id/market', to: 'markets#show', as: 'market'
+  get 'cabins/:cabin_id/reservations/:id/add_product', to: 'reservation_products#add', as:'reservation_products'
+  get 'cabins/:cabin_id/reservations/:id/add_services', to: 'reservation_services#add', as:'reservation_services'
+  get 'cabins/:cabin_id/reservations/:id/add_bicycle', to: 'reservation_bicycle#add', as:'reservation_bicycles'
 
   resources :customers
   resources :cabins do
@@ -27,3 +30,4 @@ end
   end
 
 end
+

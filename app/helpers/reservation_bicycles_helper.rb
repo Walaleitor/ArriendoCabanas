@@ -1,0 +1,2 @@
+module ReservationBicyclesHelper
+end
