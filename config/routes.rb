@@ -25,7 +25,11 @@ Rails.application.routes.draw do
   resources :cabins do
     resources :products
     resources :services
-    resources :bicycles
+    resources :bicycles do
+      member do
+        post :reservation
+      end
+    end
     resources :reservations, except: :destroy
   end
 
