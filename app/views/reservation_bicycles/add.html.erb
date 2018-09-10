@@ -23,6 +23,7 @@
     <th>Tipo</th>
     <th>Aro</th>    
     <th>Valor</th>
+    <th>Reserva</th>
   </tr>   
 
 
@@ -32,7 +33,7 @@
       <td><%= bicycle.tipo %></td>
       <td><%= bicycle.ring_size %></td>
       <td><%= bicycle.value %></td>
-      
+      <td><%= link_to "asd", reservation_cabin_bicycle_path(reservation_id: @reservation.id, id: bicycle), method: :post%></td>
     </tr>
   <% end %>
 </table>

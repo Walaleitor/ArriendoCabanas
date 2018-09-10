@@ -15,17 +15,23 @@ Rails.application.routes.draw do
   root 'cabins#index'
   get 'cabins/:id/index', to: 'reservations#index'
   get 'reservations', to: 'reservations#index', as: 'reservations'
+
   #get 'reservations/:id ', to: 'reservations#show', as: 'reservation'
   get 'cabins/:id/market', to: 'markets#show', as: 'market'
   get 'cabins/:cabin_id/reservations/:id/add_product', to: 'reservation_products#add', as:'reservation_products'
   get 'cabins/:cabin_id/reservations/:id/add_services', to: 'reservation_services#add', as:'reservation_services'
   get 'cabins/:cabin_id/reservations/:id/add_bicycle', to: 'reservation_bicycles#add', as:'reservation_bicycles'
+  post 'cabins/:cabin_id/reservations/:id/add_bicycle', to: 'reservation_bicycles#add_bicycle'
 
   resources :customers
   resources :cabins do
     resources :products
     resources :services
-    resources :bicycles
+    resources :bicycles do
+      member do
+        post :reservation
+      end
+    end
     resources :reservations, except: :destroy
   end
 

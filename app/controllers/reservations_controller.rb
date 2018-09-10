@@ -33,9 +33,9 @@ class ReservationsController < ApplicationController
   def update
 
     if @reservation.update(reservation_edit_params)
-      redirect_to cabin_reservation_path(@cabin,@reservation)
+      redirect_to cabin_reservation_path(@cabin,@reservation) , notice: "Actualizado con exito"
     else
-      render "edit"
+      redirect_back(fallback_location: 'something', notice: "no se puede actualizar")
     end
   end
 

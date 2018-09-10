@@ -1,5 +1,5 @@
 class BicyclesController < ApplicationController
-  before_action :set_params, only: [:show, :edit, :update, :destroy]
+  before_action :set_params, only: [:show, :edit, :update, :destroy, :reservation]
     before_action :authenticate_user!
 
   def index
@@ -41,6 +41,19 @@ class BicyclesController < ApplicationController
   def destroy
     #set_params
     @bicycle.destroy
+  end
+
+  def reservation
+    reservation = Reservation.find(params[:reservation_id])
+    bicycle_payment = BicyclePayment.new()
+    bicycle_payment.reservation = reservation
+    bicycle_payment.bicycle = @bicycle
+    
+    if bicycle_payment.save
+      redirect_to reservation_bicycles_path(id: reservation.id, cabin_id: reservation.cabin_id), notice: "Bicicleta reservada con exito"
+    else
+      redirect_to reservation_bicycles_path(id: reservation.id, cabin_id: reservation.cabin_id), notice: "Error en la reserva de bicleta"
+    end
   end
 
   private

@@ -19,8 +19,11 @@
 #  fk_rails_...  (bicycle_id => bicycles.id)
 #  fk_rails_...  (reservation_id => reservations.id)
 #
+#
+#
 
 class BicyclePayment < ApplicationRecord
   belongs_to :reservation
-  belongs_to :bicycle
+  belongs_to :bicycle 
+
 end
