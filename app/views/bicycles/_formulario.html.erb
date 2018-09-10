@@ -13,11 +13,22 @@
           </p>
           <p>
           <%=f.label :Aro %></br>
-          <%=f.text_field :ring_size %>
+          <%=f.select :ring_size, options_for_select([
+            ["Seleccione Aro", ""],
+            "16",
+            "20",
+            "24",
+            "26"]),
+            {}, { class: "form form-group form-control" } %>
           </p>
           <p>
           <%=f.label :Tipo %></br>
-          <%=f.text_field :tipo %>
+          <%=f.select :tipo, options_for_select([
+            ["Seleccione Una", ""],
+            "Montaña",
+            "Urbana",
+            "Plegable"]),
+            {}, { class: "form form-group form-control" } %>
           </p>
           <p>
           <%=f.label :Precio %></br>

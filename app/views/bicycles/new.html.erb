@@ -1,0 +1,56 @@
+<div class="container">
+  <h1>Producto</h1>
+  <%= form_for [@cabin,@bicycle]  do |f| %>
+  <% if @bicycle.errors.any? %>
+      <div id="error_explanation">
+        <ul>
+          <% @bicycle.errors.full_messages.each do |msg| %>
+            <li  class="alert alert-danger" role="alert"><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <% if @cabin.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@cabin.errors.count, "error") %>
+          </h2>
+          <ul>
+            <% @cabin.errors.full_messages.each do |msg| %>
+              <li  class="alert alert-danger" role="alert"><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+        <% end %>
+        <p>
+        <%=f.label :Modelo  %></br>
+        <%=f.text_field :model %>
+        </p>
+        <p>
+        <%=f.label :Aro %></br>
+        <%=f.select :ring_size, options_for_select([
+          ["Seleccione Aro", ""],
+          "16",
+          "20",
+          "24",
+          "26"]),
+          {}, { class: "form form-group form-control" } %>
+      </p>
+        </p>
+        <p>
+          <%=f.label :Tipo %></br>
+          <%=f.select :tipo, options_for_select([
+            ["Seleccione Tipo", ""],
+            "Montaña",
+            "Urbana",
+            "Plegable"]),
+            {}, { class: "form form-group form-control" } %>
+        </p>
+        <p>
+        <%=f.label :Precio %></br>
+        <%=f.text_field :value %>
+        </p>
+        <%=f.submit :Guardar, :class => 'btn btn-info'%>
+        </div>
+        <% end %>
+        </div>
