@@ -1,5 +1,6 @@
 class CabinsController < ApplicationController
    before_action :set_cabin, only: [:show ,:edit, :update, :destroy]
+   before_action :authenticate_user!
 
 
   #Pide todas las cabañas para luego listarlas

@@ -39,8 +39,8 @@ class Reservation < ApplicationRecord
   validates_presence_of :end_date, :start_date, :price
   validate :validar_orden_fechas, :solo_reservas_futuras, :validar_con_demas_reservas
 
-  
-  
+
+
 
   def solo_reservas_futuras
       if start_date.year == Date.today.year && start_date.month == Date.today.month && start_date.day < Date.today.day
@@ -52,11 +52,11 @@ class Reservation < ApplicationRecord
     if start_date.year == end_date.year && start_date.month == start_date.month && start_date.day == end_date.day
       errors.add(:start_date,"La fecha de inicio con la termino son iguales")
     elsif start_date.year == end_date.year && start_date.month == end_date.month && start_date.day > end_date.day
-      errors.add(:start_date, "le fecha de inicio es despues que la de termino")
+      errors.add(:start_date, "La fecha de inicio es despues que la de termino")
     elsif start_date.year == end_date.year && start_date.month > end_date.month
-      errors.add(:start_date, "le fecha de inicio es despues que la de termino")
+      errors.add(:start_date, "La fecha de inicio es despues que la de termino")
     elsif start_date.year > end_date.year
-      errors.add(:start_date, "le fecha de inicio es despues que la de termino")
+      errors.add(:start_date, "La fecha de inicio es despues que la de termino")
     end
   end
 
@@ -64,9 +64,9 @@ class Reservation < ApplicationRecord
     reservas = Reservation.all
     reservas.each do |reserva|
       if start_date > reserva.start_date && start_date < reserva.end_date
-        errors.add(:start_date, "la fecha de inicio ya esta reservada")
+        errors.add(:Fecha_de_Inicio, ": No existe disponibilidad, debido a que la cabaña se encuentra ocupada")
       elsif end_date > reserva.start_date && end_date < reserva.end_date
-        errors.add(:end_date, "la fecha de termino ya esta reservada")
+        errors.add(:end_date, "La fecha de termino ya esta reservada")
       end
     end
 

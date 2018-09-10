@@ -32,17 +32,31 @@ class Customer < ApplicationRecord
 
   validates :rut,
             presence: true,
+            uniqueness: true,
             rut: true
 
   validates :first_name,
              presence: true,
-             length: {minimum: 2,maximum: 10}
+             length: {minimum: 2,maximum: 10},
+             format: { with: /\A[\p{L}\p{M}]+\z/, message: ": Favor solo ingresar letras" }
 
   validates :last_name,
              presence: true,
-             length: {minimum: 2,maximum: 10}
+             length: {minimum: 2,maximum: 10},
+             format: { with: /\A[\p{L}\p{M}]+\z/, message: ": Favor solo ingresar letras" }
+  validates :email,
+            presence: true,
+            format: { with: Devise.email_regexp, message: "no valido" }
 
-  
+  validates :phone,
+             presence: true,
+             numericality: { only_integer: true }
+
+  validates :address,
+            presence: true,
+            format: {with: /\A[a-zA-Z0-9\s]+\z/i, message: "Solo puede contener letras y números."}
+
+
 
 
 end

@@ -1,5 +1,6 @@
 class ReservationsController < ApplicationController
   before_action :set_params, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   def index
     @reservations = Reservation.all
@@ -30,7 +31,7 @@ class ReservationsController < ApplicationController
   end
 
   def update
-    
+
     if @reservation.update(reservation_edit_params)
       redirect_to cabin_reservation_path(@cabin,@reservation)
     else

@@ -1,5 +1,6 @@
 class CustomersController < ApplicationController
   before_action :set_params, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   def index
     @customers = Customer.all
@@ -17,7 +18,7 @@ class CustomersController < ApplicationController
     if @customer.save
       redirect_back(fallback_location: 'something')
     else
-      render "new"
+      render :new
     end
  end
 
