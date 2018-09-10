@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
     if @product.save
       redirect_to market_path(@cabin)
     else
-      render "new"
+      render :new
     end
   end
 

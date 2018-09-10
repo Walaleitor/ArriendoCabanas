@@ -22,7 +22,7 @@
 #  fk_rails_...  (cabin_id => cabins.id)
 #
 
-class Product < ApplicationRecord	
+class Product < ApplicationRecord
 	belongs_to :cabin
 	has_many :product_payments
 	has_many :reservations , through: :product_payments
@@ -30,11 +30,14 @@ class Product < ApplicationRecord
 	#Validaciones
 	validates :name,
 			  		presence: true,
-			  		length: {minimun: 3, maximum: 20 }
+			  		length: {minimun: 3, maximum: 20 },
+						uniqueness: true,
+						format: {with: /\A[a-zA-Z0-9\s]+\z/i, message: "Solo puede contener letras y números."}
 
 	validates :description,
 			  		presence: true,
-			  		length: {minimun: 3, maximum: 40 }
+			  		length: {minimun: 3, maximum: 40 },
+						format: {with: /\A[a-zA-Z0-9\s]+\z/i, message: "Solo puede contener letras y números."}
 
 	validates :quantity,
 					  presence: true,
