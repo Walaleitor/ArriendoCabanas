@@ -1,1 +1,38 @@
-<p> Hola </p>
+
+<table class="table table-bordered">
+  <tr>
+    <th>Modelo</th>
+    <th>Tipo</th>
+    <th>Aro</th>    
+    <th>Valor</th>
+  </tr>   
+
+
+  <% @payments.each do |payment| %>
+    <tr>
+      <td><%= payment.bicycle.model %></td>
+   
+    </tr>
+  <% end %>
+
+</table>
+
+<table class="table table-bordered">
+  <tr>
+    <th>Modelo</th>
+    <th>Tipo</th>
+    <th>Aro</th>    
+    <th>Valor</th>
+  </tr>   
+
+
+  <% @bicycles.each do |bicycle| %>
+    <tr>
+      <td><%= bicycle.model %></td>
+      <td><%= bicycle.tipo %></td>
+      <td><%= bicycle.ring_size %></td>
+      <td><%= bicycle.value %></td>
+      
+    </tr>
+  <% end %>
+</table>
