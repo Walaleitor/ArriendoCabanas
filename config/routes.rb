@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       root 'devise/sessions#new', as: :unauthenticated_root
     end
   end
+  resources :users
   root 'cabins#index'
   get 'cabins/:id/index', to: 'reservations#index'
   get 'reservations', to: 'reservations#index', as: 'reservations'

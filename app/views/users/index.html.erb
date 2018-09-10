@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-sm-4">
+    <h3>Usuarios</h3>
+  </div>
+  <div class="col-md-4">
+
+  </div>
+</div>
+<table class="table table-bordered">
+  <tr>
+    <th>Correo</th>
+    <th>Rol</th>
+  </tr>
+
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.email %></td>
+      <td><%= user.rol %></td>
+    </tr>
+  <% end %>
+</table>
+  <%if can? :create, @user %>
+  <%= link_to 'Agregar',  new_user_path, class: 'btn btn-primary btn-xs' %>
+  <%end%>
+  <%= link_to 'Pagina Inicio', root_path %>

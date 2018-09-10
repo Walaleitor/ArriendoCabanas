@@ -6,7 +6,6 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
-
 <body>
   <% if user_signed_in? %>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -16,13 +15,18 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-
       <li class="nav-item">
         <a class="nav-link" href="http://localhost:3000/customers">Clientes</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="http://localhost:3000/reservations">Reservas</a>
+        <li class="nav-item">
+          <% if can? :create, @user%>
+          <a class="nav-link" href="http://localhost:3000/users">Usuarios</a>
+          <%end%>
+        </li>
     </ul>
+
     <ul class="navbar-nav">
   					<li class="nav-link"><%= link_to('Mi Cuenta', edit_user_registration_path) %></li>
   					<li class="nav-link"><%= link_to "Cerrar Sesión", destroy_user_session_path, :method => :delete %></li>
@@ -30,11 +34,8 @@
   </ul>
   </div>
 </nav>
-
 <p class="notice"><%= alert %></p>
 <p class="alert alert-success" role="alert"><%= notice %></p>
-
 <%= yield %>
-
 </body>
 </html>

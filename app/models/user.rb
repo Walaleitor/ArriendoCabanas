@@ -26,5 +26,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  enum rol: {admin: 0, assistant: 1, user: 2}
+  enum rol: {admin: 2, assistant: 1, user: 0}
 end

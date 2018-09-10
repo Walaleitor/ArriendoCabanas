@@ -1,6 +1,6 @@
 class BicyclesController < ApplicationController
   before_action :set_params, only: [:show, :edit, :update, :destroy, :reservation]
-    before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
     @bicycles = Bicycle.all
@@ -48,7 +48,7 @@ class BicyclesController < ApplicationController
     bicycle_payment = BicyclePayment.new()
     bicycle_payment.reservation = reservation
     bicycle_payment.bicycle = @bicycle
-    
+
     if bicycle_payment.save
       redirect_to reservation_bicycles_path(id: reservation.id, cabin_id: reservation.cabin_id), notice: "Bicicleta reservada con exito"
     else
