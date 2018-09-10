@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   #get 'reservations/:id ', to: 'reservations#show', as: 'reservation'
   get 'cabins/:id/market', to: 'markets#show', as: 'market'
   get 'cabins/:cabin_id/reservations/:id/add_product', to: 'reservation_products#add', as:'reservation_products'
-  get 'cabins/:cabin_id/reservations/:id/add_services', to: 'reservation_services#add', as:'reservation_services'
+  get 'cabins/:cabin_id/reservations/:id/add_service', to: 'reservation_services#add', as:'reservation_services'
   get 'cabins/:cabin_id/reservations/:id/add_bicycle', to: 'reservation_bicycles#add', as:'reservation_bicycles'
 
   resources :customers

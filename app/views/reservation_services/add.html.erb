@@ -1,0 +1,28 @@
+<table class="table table-bordered">
+  <tr>
+    <th>Nombre</th>
+    <th>Cantidad</th>
+    <th>Precio</th>
+  </tr>
+  <% @payments.each do |payment| %>
+    <tr>
+      <td><%= payment.product.model %></td>
+    </tr>
+  <% end %>
+</table>
+<table class="table table-bordered">
+  <tr>
+    <th>Nombre</th>
+    <th>Cantidad</th>
+    <th>Precio</th>
+    <th>Reserva</th>
+  </tr>
+  <% @services.each do |service| %>
+    <tr>
+      <td><%= service.name %></td>
+      <td><%= service.quantity %></td>
+      <td><%= service.value %></td>
+      <td><%= link_to "asd", reservation_cabin_service_path(reservation_id: @reservation.id, id: service), method: :post%></td>
+    </tr>
+  <% end %>
+</table>
