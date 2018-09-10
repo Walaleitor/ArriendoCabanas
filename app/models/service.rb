@@ -28,15 +28,17 @@ class Service < ApplicationRecord
 
 	#Validaciones
 	validates :name,
-			      presence: true,
+			      presence: {message: ": No puede estar en blanco"},
 			      length: {minimun: 3, maximum: 40}
 
 	validates :quantity,
-			      presence: true,
-			      numericality: true
+			      presence: {message: ": No puede estar en blanco"},
+			      numericality: {only_integer: true, message: ": Solo puede contener números"}
+
 
 	validates :value,
-			      presence: true,
-			      numericality: true
+			      presence: {message: ": No puede estar en blanco"},
+			      numericality: {only_integer: true, message: ": Solo puede contener números"}
+
 
   end

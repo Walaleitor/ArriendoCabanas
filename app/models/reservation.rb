@@ -36,19 +36,22 @@ class Reservation < ApplicationRecord
 
 
   #Validaciones
-  validates_presence_of :end_date, :start_date, :price
   validate :validar_orden_fechas, :solo_reservas_futuras, :validar_con_demas_reservas
 
   validates :start_date,
-            presence: true
+            presence: {message: ": No puede estar en blanco"}
 
   validates :end_date,
-            presence: true
+            presence: {message: ": No puede estar en blanco"}
+
+
+  validates :price,
+            presence: {message: ": No puede estar en blanco"}
 
   def solo_reservas_futuras
     if start_date != nil
-      if start_date.year == Date.today.year && start_date.month == Date.today.month && start_date.day < Date.today.day
-        errors.add(:start_date, "No se pueden hacer reservas en el pasado")
+      if start_date.year == Date.today.year && start_date.month == Date.today.month && start_date.day < Date.today.year
+        errors.add(:start_date, ": No es posible realizar una reserva de una fecha anterior al día de hoy")
       end
     end
   end
@@ -58,7 +61,7 @@ class Reservation < ApplicationRecord
       if start_date.year == end_date.year && start_date.month == start_date.month && start_date.day == end_date.day
         errors.add(:start_date,"La fecha de inicio con la termino son iguales")
       elsif start_date.year == end_date.year && start_date.month == end_date.month && start_date.day > end_date.day
-        errors.add(:start_date, "La fecha de inicio es despues que la de termino")
+        errors.add(:start_date, "La fecha de Entrada es despues que la de Salida")
       elsif start_date.year == end_date.year && start_date.month > end_date.month
         errors.add(:start_date, "La fecha de inicio es despues que la de termino")
       elsif start_date.year > end_date.year
@@ -71,7 +74,6 @@ class Reservation < ApplicationRecord
     if start_date != nil
     reservas = Reservation.all
     reservas.each do |reserva|
-
       if start_date > reserva.start_date && start_date < reserva.end_date
         errors.add(:Fecha_de_Inicio, ": No existe disponibilidad, debido a que la cabaña se encuentra ocupada")
       elsif end_date > reserva.start_date && end_date < reserva.end_date

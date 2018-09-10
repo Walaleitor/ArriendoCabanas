@@ -21,6 +21,11 @@
         <td><%= reservation.customer.rut %></td>
         <td><%= reservation.start_date %></td>
         <td><%= reservation.end_date %>
+              <%= link_to 'ver', cabin_reservations_path(reservation) %>
+
+              <%= link_to 'ELIMINAR', cabin_reservations_path(reservation),
+                          method: :delete,
+                          data: {confirm: '¿Estas seguro?'} %> </td>
       </tr>
     <% end %>
     </br>

@@ -22,16 +22,12 @@ class Customer < ApplicationRecord
 
   #Validaciones
 
-  validates_presence_of  :email, :address, :phone
-  validates_email_format_of :email, :message => 'is not looking good'
-
-
   def select_client
     "#{first_name} #{last_name} + #{rut}"
   end
 
   validates :rut,
-            presence: true,
+            presence: {message: ": No puede estar en blanco"},
             uniqueness: true,
             rut: true
 
@@ -44,18 +40,18 @@ class Customer < ApplicationRecord
              presence: {message: ": No puede estar en blanco"},
              length: {minimum: 2,maximum: 10, message: ": Minimo 2 caráctares"},
              format: { with: /\A[\p{L}\p{M}]+\z/, message: ": Favor solo ingresar letras" }
-             
+
   validates :email,
             presence: {message: ": No puede estar en blanco"},
             format: { with: Devise.email_regexp, message: "no valido" }
 
   validates :phone,
              presence: {message: ": No puede estar en blanco"},
-             numericality: { only_integer: true, message: "Solo puede contener números"}
+             numericality: { only_integer: true, message: ": Solo puede contener números"}
 
   validates :address,
             presence: {message: ": No puede estar en blanco"},
-            format: {with: /\A[a-zA-Z0-9\s]+\z/i, message: "Solo puede contener letras y números."}
+            format: {with: /\A[a-zA-Z0-9\s]+\z/i, message: ": Solo puede contener letras y números."}
 
 
 

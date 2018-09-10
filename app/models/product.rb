@@ -29,21 +29,21 @@ class Product < ApplicationRecord
 
 	#Validaciones
 	validates :name,
-			  		presence: true,
+			  		presence: {message: ": No puede estar en blanco"},
 			  		length: {minimun: 3, maximum: 20 },
 						uniqueness: true,
-						format: {with: /\A[a-zA-Z0-9\s]+\z/i, message: "Solo puede contener letras y números."}
+						format: {with: /\A[a-zA-Z0-9\s]+\z/i, message: ": Solo puede contener letras y números."}
 
 	validates :description,
-			  		presence: true,
+			  		presence: {message: ": No puede estar en blanco"},
 			  		length: {minimun: 3, maximum: 40 },
-						format: {with: /\A[a-zA-Z0-9\s]+\z/i, message: "Solo puede contener letras y números."}
+						format: {with: /\A[a-zA-Z0-9\s]+\z/i, message: ": Solo puede contener letras y números."}
 
 	validates :quantity,
-					  presence: true,
-					  numericality: true
+					  presence: {message: ": No puede estar en blanco"},
+					  numericality: {only_integer: true, message: ": Solo puede contener números"}
 
 	validates :price,
-					  presence: true,
-					  numericality: true
+					  presence: {message: ": No puede estar en blanco"},
+					  numericality: {only_integer: true, message: ": Solo puede contener números"}
 end

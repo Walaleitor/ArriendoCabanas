@@ -23,25 +23,27 @@
 #
 
 class Bicycle < ApplicationRecord
-	belongs_to :cabin	
+	belongs_to :cabin
 	has_many :bicycle_payments
 	has_many :reservations , through: :bicycle_payments
 
 	#Validaciones
 	validates :model,
-			  		presence: true,
+			  		presence: {message: ": No puede estar en blanco"},
 			  		length: {minimun: 3, maximum: 20 }
 
     validates :ring_size,
-    		  		presence: true,
-    		  		numericality: true
+    		  		presence: {message: ": No puede estar en blanco"}
+
+
 
     validates :tipo,
-    		  		presence: true,
+    		  		presence: {message: ": No puede estar en blanco"},
     		  		length: {minimun: 3, maximum: 20 }
 
     validates :value,
-    		  		presence: true,
-    		  		numericality: true
+    		  		presence: {message: ": No puede estar en blanco"},
+    		  		numericality: {only_integer: true, message: ": Solo puede contener números"}
+
 
 end

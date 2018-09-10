@@ -17,7 +17,7 @@ class Cabin < ApplicationRecord
 
   #Validaciones
   validates :name,
-            presence: true,
+            presence: {message: ": No puede estar en blanco"},
             length: {minimun: 3, maximum: 20 }
 
 
