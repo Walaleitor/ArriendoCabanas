@@ -21,31 +21,21 @@
       <td> <%= customer.rut %> </td>
       <td> <%= customer.email %> </td>
       <td> <%= customer.address %> </td>
-      <td> <%= customer.phone %> 
+      <td> <%= customer.phone %>
+      <%if can? :create, @user%>
       <td><%= link_to 'Ver', customer_path(customer), :class  => 'btn btn-info' %></td>
       <td><%= link_to 'Editar', edit_customer_path(customer), remote: true, :class => 'btn btn-warning'%></td>
       <td><%= link_to 'Borrar', customer, :class => 'btn btn-danger',
                       method: :delete,
                       data: { confirm: 'Eliminar' } %></td>
+      <% end %>
     </tr>
   <% end %>
 </table>
 <div>
+  <%if can? :create, @user%>
     <%= link_to 'Nuevo Cliente', new_customer_path, remote: true, :class => 'btn btn-primary btn-xs' %>
-<div class="col-sm-4">
-  </div>
-  <div class="col-sm-4">
-  </div>
-  </div>
-    <div class="col-sm-4">
-  </div>
-
+    <%end%>
 <%= link_to 'Pagina Inicio', root_path, :class => 'btn btn-info'%>
 
 </div>
-
-
-
-
-
-

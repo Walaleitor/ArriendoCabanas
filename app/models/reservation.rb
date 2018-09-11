@@ -36,14 +36,16 @@ class Reservation < ApplicationRecord
 
 
   #Validaciones
-  validates_presence_of :end_date, :start_date, :price
   validate :validar_orden_fechas, :solo_reservas_futuras, :validar_con_demas_reservas
 
   validates :start_date,
-            presence: true
+            presence: {message: ": No puede estar en blanco"}
 
   validates :end_date,
-            presence: true
+            presence: {message: ": No puede estar en blanco"}
+
+  validates :price,
+            presence: {message: ": No puede estar en blanco"}
 
   def solo_reservas_futuras
     if start_date != nil

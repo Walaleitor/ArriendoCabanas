@@ -1,11 +1,9 @@
 <div class="container">
 <div class="row">
-  <div class="col-sm-4">
-    <h3>Todas las Cabañas</h3>
+  <div class="text-center col-md-12">
+    <h3>Cabañas</h3>
   </div>
-  <div class="col-md-4">
-    <%= link_to 'Agregar', new_cabin_path, remote: true, :class => 'btn btn-primary btn-xs' %>
-  </div>
+
 </div>
 <table class="table table-bordered">
   <tr>
@@ -16,15 +14,23 @@
   <% @cabins.each do |cabin| %>
     <tr>
       <td><%= cabin.name %></td>
+
       <td><%= link_to 'Ver Calendario', cabin_path(cabin), :class  => 'btn btn-info' %>
-      <%= link_to 'Reserva', new_cabin_reservation_path(cabin), :class => 'btn btn-info'  %>
-      <%= link_to 'Editar', edit_cabin_path(cabin), remote: true, :class => 'btn btn-warning'%>
-      <%= link_to 'Mercados', market_path(cabin), :class  => 'btn btn-info' %>
-      <%= link_to 'Borrar', cabin, :class => 'btn btn-danger',
+      <% if can? :create, @user %>
+      <%= link_to 'Reservar Cabaña', new_cabin_reservation_path(cabin), :class => 'btn btn-info'  %>
+      <%= link_to 'Servicios Cabaña', market_path(cabin), :class  => 'btn btn-info' %>
+      <%= link_to 'Editar Cabaña', edit_cabin_path(cabin), remote: true, :class => 'btn btn-warning'%>
+      <%= link_to 'Eliminar Cabaña', cabin, :class => 'btn btn-danger',
                       method: :delete,
                       data: { confirm: '¿Estás seguro?' } %></td>
+    <% end %>
     </tr>
+
   <% end %>
 </table>
-<%= link_to 'Pagina Inicio', root_path, :class => 'btn btn-info' %>
+<div class="col-md-12">
+  <% if can? :create, @user%>
+  <%= link_to 'Agregar Cabaña', new_cabin_path, remote: true, :class => 'btn btn-primary btn-xs' %>
+  <% end %>
+  <%= link_to 'Pagina Inicio', root_path, :class => 'btn btn-info' %>
 </div>
