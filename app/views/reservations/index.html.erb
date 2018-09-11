@@ -21,10 +21,6 @@
         <td><%= reservation.customer.rut %></td>
         <td><%= reservation.start_date %></td>
         <td><%= reservation.end_date %>
-              <%= link_to 'ELIMINAR', reservations_path(@reservation),
-                          remote: true ,:class => 'btn btn-info',
-                          method: :delete,
-                          data: {confirm: '¿Estas seguro?'} %> </td>
       </tr>
     <% end %>
     </br>

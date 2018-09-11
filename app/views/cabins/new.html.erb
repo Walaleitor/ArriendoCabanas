@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Cabaña</h1>
+<%= form_for [@cabin] do |f| %>
+ <% if @cabin.errors.any? %>
+ <div id="error_explanation">
+
+   <ul>
+     <% @cabin.errors.full_messages.each do |msg| %>
+       <li  class="alert alert-danger" role="alert"><%= msg %></li>
+     <% end %>
+   </ul>
+ </div>
+<% end %>
+<%=f.label :'Nombre Cabaña'%></br>
+<%=f.text_field :name %>
+
+   <%=f.submit :Guardar, :class => 'btn btn-info'%>
+   </div>
+
+   <% end %>
+   </div>

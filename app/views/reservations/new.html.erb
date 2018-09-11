@@ -45,10 +45,6 @@
 
     <%= f.collection_select :customer_id, Customer.all, :id, :select_client , class: "class-bootstrap" %>
     <%= link_to 'Crear Cliente', new_customer_path(@cabin), remote: true , :class  => 'btn btn-info' %>
-
-
-
-
     <%=f.submit :'Crear Reserva', :class  => 'btn btn-info' %>
 
   <% end %>

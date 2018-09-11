@@ -11,6 +11,7 @@
   <p><%= @reservation.state %></p>
 
   <p><%= link_to 'Actualizar', edit_cabin_reservation_path(@cabin,@reservation), remote: true ,:class => 'btn btn-info'  %></p>
+  <p><%= link_to 'Eliminar', cabin_reservation_path(@cabin,@reservation), method: :delete ,:class => 'btn btn-info'  %></p>
   <p> <%= link_to 'Añadir Producto',  reservation_products_path(@cabin,@reservation),:class => 'btn btn-info' %> </p>
   <p> <%= link_to 'Añadir Servicio',  reservation_services_path(@cabin,@reservation),:class => 'btn btn-info' %> </p>
   <p> <%= link_to 'Añadir Bicicleta',  reservation_bicycles_path(@cabin,@reservation),:class => 'btn btn-info' %> </p>
