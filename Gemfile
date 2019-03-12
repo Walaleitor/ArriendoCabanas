@@ -11,7 +11,7 @@ gem 'rut_validator'
 #Email Validator
 gem 'validates_email_format_of'
 #bootstrap
-gem 'bootstrap', '~> 4.0.0'
+gem "bootstrap", ">= 4.3.1"
 gem 'jquery-rails'
 #Full Calendar
 gem 'fullcalendar-rails'
