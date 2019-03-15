@@ -7,6 +7,7 @@ end
 ruby '2.4.1'
 gem 'cancancan', '~> 2.0'
 gem 'devise'
+gem "actionview", ">= 5.1.6.2"
 gem 'rut_validator'
 #Email Validator
 gem 'validates_email_format_of'
